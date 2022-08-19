@@ -44,3 +44,13 @@ Helps to find a private property for Rent or Buying.
 - Subscribe over [Telegram](https://telegram.org);
 - Notifies immediatelly when a new Property is discovered;
 - Telegram Bot interface;
+
+## [Wizzair, Ryanair, Norwegian crawler](https://gitlab.com/travelingbug/crawler)
+As a part of my project [Travelingbug](https://travelingbug.netlify.app) I worked on Wizzair, Norwegian and Ryanair aircraft flights scrappers. To simplify life to the other developers, I open-sourced this project. 
+- Microservices are written on Js/NodeJS.
+- Packed into Docker image
+- Wizzair required Browser-automation, so NightmareJS + xvfb were used to automate this task.
+
+## [Google Image Search automation tool](https://gitlab.com/travelingbug/images-scraper)
+
+For my [Travleingbug](https://travelingbug.netlify.app) project I need a royalty free pictures of the cities. Google Images API is not free, so I automated this task over Browser-automation. To choose a best image, I used [MobileNetSSD](https://gitlab.com/travelingbug/object-detection) to detect undesired objects on pictures, in order to pick a picture without these objects.
