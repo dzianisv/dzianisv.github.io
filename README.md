@@ -54,3 +54,6 @@ As a part of my project [Travelingbug](https://travelingbug.netlify.app) I worke
 ## [Google Image Search automation tool](https://gitlab.com/travelingbug/images-scraper)
 
 For my [Travleingbug](https://travelingbug.netlify.app) project I need a royalty free pictures of the cities. Google Images API is not free, so I automated this task over Browser-automation. To choose a best image, I used [MobileNetSSD](https://gitlab.com/travelingbug/object-detection) to detect undesired objects on pictures, in order to pick a picture without these objects.
+
+## [End-to-End Encrypted Pass manager](https://github.com/keeweb/keeweb)
+I forked and extended KeyWeb web app in order to store end-to-end encrypted database in the Firebase Database.
