@@ -57,3 +57,6 @@ For my [Travleingbug](https://travelingbug.netlify.app) project I need a royalty
 
 ## [End-to-End Encrypted Pass manager](https://github.com/keeweb/keeweb)
 I forked and extended KeyWeb web app in order to store end-to-end encrypted database in the Firebase Database.
+
+## [Geophoto: puts labels with a photo location](https://github.com/dzianisv/geophoto)
+I created this tool to create a "How I spend this year" social media video. Use it to "glue" all your photos in a video clip.
