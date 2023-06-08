@@ -14,12 +14,13 @@ I did a first prototype on [micro:bit](https://tech.microbit.org/hardware/) deve
 |Speed|16MHz
 |Debug|SWD, jlink/OB
 
-
-And it works more time in comparison witth ESP32, especially on a small battery.
-
 ![](NordicNRF52833-Airtag.md-images/microbit-airtag.webp)
-
 ![](NordicNRF52822-Airtag.md-images/2023-06-08-12-38-39.webp)
+
+## ESP32 vs nRF51822 Power Conumption
+
+OpenHaystack beacon works more time on micro:bit dev board (nRF51822) in comparison witth ESP32, especially on a small battery. Because ESP32 the low power modes of the ESP32 can consume between 68mA and 5µA [Reference](https://www.arrow.com/en/research-and-events/articles/esp32-power-consumption-can-be-reduced-with-sleep-modes#:~:text=The%20upshot%20to%20all%20of,between%2068mA%20and%205%C2%B5A%2C%20or%20). But nRF51822 0.6µA [Reference](https://devzone.nordicsemi.com/guides/hardware-design-test-and-measuring/b/nrf5x/posts/nrf51-current-consumption-guide#:~:text=Schematics%20for%20the%20three%20different,27%20in%20the%20PS%20v2.), that at least 10 times less.
+
 ## Production-ready
 
 But micro:bit dev board is not small, so I continued to look for the better fit.
