@@ -1,0 +1,1 @@
+[Solokey CLI fix](https://github.com/solokeys/solo1/issues/627)
