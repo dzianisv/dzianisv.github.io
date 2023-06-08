@@ -54,7 +54,7 @@ We introduce Alpaca 7B, a model fine-tuned from the LLaMA 7B model on 52K instru
 
 Alpace is fine-tuned from Meta’s LLaMA 7B model. We train the Alpaca model on 52K instruction-following demonstrations generated in the style of self-instruct using text-davinci-003. On the self-instruct evaluation set, Alpaca shows many behaviors similar to OpenAI’s text-davinci-003, but is also surprisingly small and easy/cheap to reproduce.
 
-![](2023-05-22-14-54-56.jpg)
+![](2023-05-22-14-54-56.webp)
 
 We emphasize that Alpaca is intended only for academic research and any **commercial use is prohibited**. There are three factors in this decision: First, Alpaca is based on LLaMA, which has a non-commercial license, so we necessarily inherit this decision. Second, the instruction data is based on OpenAI’s text-davinci-003, whose terms of use prohibit developing models that compete with OpenAI.[Reference](https://crfm.stanford.edu/2023/03/13/alpaca.html)
 
@@ -65,7 +65,7 @@ Self-Instrcut ipeline generates instruction, input, and output samples from a la
 
 Vicuna-13B is a new open-source chatbot that has been developed to address the lack of training and architecture details in existing large language models (LLMs) such as OpenAI’s ChatGPT. Vicuna-13B is trained by fine-tuning a LLaMA base model using approximately 70,000 user-shared conversations gathered from ShareGPT.com, resulting in an enhanced dataset. The preliminary evaluation of Vicuna-13B using GPT-4 as a judge shows that it achieves over 90% quality of OpenAI ChatGPT and Google Bard while outperforming other models like LLaMA and Stanford Alpaca in more than 90% of cases.
 
-![](2023-05-22-15-09-18.jpg)
+![](2023-05-22-15-09-18.webp)
 
 The team then asks GPT-4 to rate the quality of the chatbots’ answers based on helpfulness, relevance, accuracy, and detail. GPT-4 produces relatively consistent scores and provides detailed explanations of why such scores are given. However, the team notes that GPT-4 is not very good at judging coding/math tasks. [Reference](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
 
@@ -79,7 +79,7 @@ Databricks’ Dolly is an instruction-following large language model trained on 
 [Reference](https://arxiv.org/pdf/2304.01373.pdf)
 
 ## [Koala]()
-![](2023-05-22-15-24-05.jpg)
+![](2023-05-22-15-24-05.webp)
 
 chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. The Koala model was trained on a single Nvidia DGX server with 8 A100 GPUs, and the training took 6 hours to complete for 2 epochs. It also mentions that on public cloud computing platforms, such a training run typically costs less than $100 with preemptible instances.
 

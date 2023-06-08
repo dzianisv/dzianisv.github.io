@@ -7,7 +7,7 @@ So, before we get lost in the intricate jungles of code and circuit boards, reme
 
 ### OpenHaystack and Airtag (optional)
 
-![](ESP32-Baremetal-Airtag.md-images/2023-06-07-16-24-56.jpg)
+![](ESP32-Baremetal-Airtag.md-images/2023-06-07-16-24-56.webp)
 
 > OpenHaystack allows you to track non-Apple devices on the Find Me tracking network, you will need a Mac computer to actually see where your device is. The team’s software requires a computer running macOS 11 (Big Sur) to run, and judging by the fact it integrates with Apple Mail to pull the tracking data through a private API, we’re going to assume this isn’t something that can easily be recreated in a platform-agnostic way. [📖](https://hackaday.com/tag/openhaystack/)
 
@@ -34,7 +34,7 @@ Connect USB-UART to the MCU in the following way. I didn't use a development boa
 > `esptool.py`  resets ESP32 automatically by asserting DTR and RTS control lines of the USB to serial converter chip, i.e., FTDI, CP210x, or CH340x. The DTR and RTS control lines are in turn connected to **GPIO0 and EN (CHIP_PU) pins of ESP32, thus changes in the voltage levels of DTR and RTS will boot the ESP32 into Firmware Download mode.**
 [Reference](https://docs.espressif.com/projects/esptool/en/latest/esp32/advanced-topics/boot-mode-selection.html)
 
-![](ESP32-Baremetal-Airtag.md-images/2023-06-07-16-09-32.jpg)
+![](ESP32-Baremetal-Airtag.md-images/2023-06-07-16-09-32.webp)
 `
 ## Check that ESP32/UART are connected correctly [optional]
 
@@ -63,7 +63,7 @@ Hard resetting via RTS pin..
 
 
 ## Export advertisment key
-![](ESP32-Baremetal-Airtag.md-images/2023-06-07-11-17-06.jpg)
+![](ESP32-Baremetal-Airtag.md-images/2023-06-07-11-17-06.webp)
 
 ## Flash a firmware
 There is a "Deploy" context menu item, but I didn't work for me, therefore I did the following:
@@ -114,11 +114,11 @@ Hard resetting via RTS pin...
 I noticed, that it doesn't reset after erasing MCU, so I removed `--after no_reset` line in the flash script.
 
 ##  Mark key as deployed
-![](ESP32-Baremetal-Airtag.md-images/2023-06-07-11-30-11.jpg)
+![](ESP32-Baremetal-Airtag.md-images/2023-06-07-11-30-11.webp)
 
 ## Pull-up EN pin
 Don't forget to put pull-up resistor to EN pin. It has to be on logical high level to switch on ESP32.
 
-![](ESP32-Baremetal-Airtag.md-images/2023-06-07-13-33-33.jpg)
+![](ESP32-Baremetal-Airtag.md-images/2023-06-07-13-33-33.webp)
 
 ## Enjoy free tracking!

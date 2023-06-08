@@ -71,3 +71,5 @@ Embedded/ESP32-peripherals.md-images/2023-06-08-08-29-35.webp filter=lfs diff=lf
 Embedded/OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-13.webp filter=lfs diff=lfs merge=lfs -text
 Embedded/OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-21.webp filter=lfs diff=lfs merge=lfs -text
 Embedded/OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-31-23.webp filter=lfs diff=lfs merge=lfs -text
+Embedded/NordicNRF52822-Airtag.md-images/2023-06-08-12-38-39.webp filter=lfs diff=lfs merge=lfs -text
+Embedded/NordicNRF52822-Airtag.md-images/2023-06-08-12-44-41.webp filter=lfs diff=lfs merge=lfs -text

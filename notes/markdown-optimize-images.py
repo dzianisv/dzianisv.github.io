@@ -17,7 +17,7 @@ logger.addHandler(logging.StreamHandler(sys.stderr))
 def optimize_image(png_path, quality=70):
     output_path = re.sub(r'\.(png|jpg)$', '.webp', png_path)
     try:
-        img = Image.open(png_path)
+        img = Image.open(png_path).convert("RGBA")
         rgb_img = img.convert('RGB')
         rgb_img.save(output_path, 'WEBP', quality=70)
         logger.info('Converted "%s" -> "%s"', png_path, output_path)
@@ -31,13 +31,13 @@ def replace_png_with_jpg(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
-    image_regex =  r'!\[.*\]\(((?!http)(?!https).*\.(png|jpg))`\)'
+    image_regex =  r'!\[.*\]\(((?!http)(?!https).+\.(png|jpg))\)'
     logger.info("processing \"%s\"", file_path)
     image_tags = re.findall(image_regex, content)
     for image_tag in image_tags:
         logger.debug("processing tag %s", image_tag)
-        path, _ext = image_tag[0]
-        path = os.path.join(os.path.dirname(file_path), path)
+        image_uri, image_ext = image_tag
+        path = os.path.join(os.path.dirname(file_path), image_uri)
         logger.debug('found image path "%s"', path)
         if os.path.exists(path):  # checks if the png file exists
             new_path = optimize_image(path)
@@ -50,7 +50,7 @@ def replace_png_with_jpg(file_path):
             except (OSError, PermissionError) as e:
                 logger.error(f"Error: Unable to remove file {path}: %s", e)
 
-            content = content.replace(path, new_path)
+            content = content.replace(image_uri, image_uri.replace('.' + image_ext, '.webp'))
 
     with open(file_path, 'w') as file:
         file.write(content)

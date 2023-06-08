@@ -5,8 +5,8 @@ A short note on how I built OpenWrt + LTE router setup
 [Aliexpress ~40$](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.7e564aa6qb7B3v&sku_id=64789943590)
 
 
-![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-13.jpg)
-![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-21.jpg)
+![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-13.webp)
+![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-37-21.webp)
 
 
 > MediaTek MT7628AN ; CPU 580MHz
@@ -22,7 +22,7 @@ PCIE
 [Aliexpress ~17$](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.3a924aa6hLWSfd&sku_id=12000027436374057)
 
 > 150Mbps FDD-LTE TDD-LTE HSPA/UMTS GSM/GPRS/EDGE
-![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-31-23.jpg)
+![](OpenWrt-LTE-Router-Setup.md-images/2023-06-08-08-31-23.webp)
 
 
 ## OpenWrt Configuration

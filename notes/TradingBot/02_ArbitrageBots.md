@@ -39,11 +39,11 @@ Arbitrage can be used whenever any stock, commodity, or currency may be purchase
 
 The price of an asset pair on a Centralized Order Book is determined by individual market makers creating buy and sell orders while other participants decide if they want to trade at those given prices. [4]
 
-![](2023-02-16-18-13-33.jpg)
+![](2023-02-16-18-13-33.webp)
 
 On the other hand, Automated Market Makers use a mathematical formula to define the price depending on each asset’s balance deposited on the liquidity pool. [4]
 
-![](2023-02-16-18-14-54.jpg)
+![](2023-02-16-18-14-54.webp)
 
 It is interesting to notice that the only way for the price to move on an AMM is when a swap happens, therefore, arbitrageurs become the main force in helping the AMM keep the price close to all the other markets. [4]
 

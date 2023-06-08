@@ -4,26 +4,26 @@ ChatGPT is a large language model created by OpenAI that uses the GPT-3 architec
 
 GPT-3.5-Turbo is not a commonly used term in the context of AI or natural language processing. It's possible that it is a specific variant or modification of the GPT-3 architecture, but without more information it's difficult to say for certain. GPT-3 itself is a powerful language model that has been trained on a massive dataset of text, making it capable of generating high-quality responses to a wide range of prompts.
 
-![](2023-05-21-15-06-30.jpg)
+![](2023-05-21-15-06-30.webp)
 
 ## [Poe](http://poe.com)
-![](2023-05-21-15-08-59.jpg)
+![](2023-05-21-15-08-59.webp)
 
 LLM agregator. You can access different LLM models, including ChatGPT, GPT4, Claude, Dragonfly, Sage.
 
 
 I didn't spend much time exploring Claude on poe.com, but I noticed that GPT3.5 is better. And this comparison table says the same
 
-![](2023-05-27-13-30-40.jpg)
+![](2023-05-27-13-30-40.webp)
 
 ## [Vercel Playground](https://play.vercel.ai/)
-![](images/2023-06-04-19-45-33.jpg)
+![](images/2023-06-04-19-45-33.webp)
 
 A nice tool to see how different LLM asnsers to different questions.
 
 ## [Phind](https://phind.com)
-![](images/2023-06-04-19-47-10.jpg)
-![](images/2023-06-04-19-47-53.jpg)
+![](images/2023-06-04-19-47-10.webp)
+![](images/2023-06-04-19-47-53.webp)
 ## [Forefront](http://forefront.ai)
 
 
@@ -33,7 +33,7 @@ A nice tool to see how different LLM asnsers to different questions.
 
 BloombergGPT, a 50 billion parameter language model that is trained on a wide range of financial data. We construct a 363 billion token dataset based on Bloomberg's extensive data sources, perhaps the largest domain-specific dataset yet, augmented with 345 billion tokens from general purpose datasets. We validate BloombergGPT on standard LLM benchmarks, open financial benchmarks, and a suite of internal benchmarks that most accurately reflect our intended usage. Our mixed dataset training leads to a model that outperforms existing models on financial tasks by significant margins without sacrificing performance on general LLM benchmarks.[Reference](https://arxiv.org/abs/2303.17564)
 
-![https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/](2023-05-28-20-17-47.jpg)
+![https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/](2023-05-28-20-17-47.webp)
 
 [Whitepaper](https://arxiv.org/pdf/2303.17564.pdf)
 
@@ -43,22 +43,22 @@ Support Alpaca, Vicuna, GPT4All models
 # Marketing
 
 ## [Flair.ai](flair.ai)
-![](2023-05-20-17-02-55.jpg)
+![](2023-05-20-17-02-55.webp)
 Tool to create marketing photos of the good
 ## [Oxolo](oxolo.com)
 Generates video marketing videos.
 Input: link to the item, photo of the item
-![](2023-05-20-17-04-32.jpg)
-![](2023-05-20-17-17-29.jpg)
-![](2023-05-20-17-19-17.jpg)
-![](2023-05-20-17-19-33.jpg)
+![](2023-05-20-17-04-32.webp)
+![](2023-05-20-17-17-29.webp)
+![](2023-05-20-17-19-17.webp)
+![](2023-05-20-17-19-33.webp)
 
 ## [D-ID](https://www.d-id.com/)
 Generates talking person video by photo and text script
-![](2023-05-20-17-36-07.jpg)
-![](2023-05-20-17-36-28.jpg)
-![](2023-05-20-17-37-13.jpg)
-![](2023-05-20-17-54-17.jpg)
+![](2023-05-20-17-36-07.webp)
+![](2023-05-20-17-36-28.webp)
+![](2023-05-20-17-37-13.webp)
+![](2023-05-20-17-54-17.webp)
 
 #  Generic Image Generation
 # [Midjourney](https://www.midjourney.com/)
@@ -70,31 +70,31 @@ It is available over [Discord](https://discord.com/invite/midjourney) interface.
 ## [Dallee 2](https://openai.com/product/dall-e-2)
 DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
 
-![](2023-05-21-14-42-38.jpg)
+![](2023-05-21-14-42-38.webp)
 
 Examples of generated images of "panda on surfboard"
-![DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.jpg](DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.jpg)
-![DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.jpg](DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.jpg)
-![DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.jpg](DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.jpg)
-![DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.jpg](DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.jpg)
-![DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.jpg](DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.jpg)
-![DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.jpg](DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.jpg)
-![DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.jpg](DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.jpg)
+![DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp)
+![DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp)
+![DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp)
+![DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp)
+![DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp](DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp)
+![DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
+![DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
 
 ## [Playground AI](https://playgroundai.com/login?redirect=/create?)
 The quality of images close to midjourney, pictures are beautiful.
 
-![](2023-05-21-14-52-03.jpg)
-![](2023-05-21-14-55-54.jpg)
-![](2023-05-21-14-56-17.jpg)
+![](2023-05-21-14-52-03.webp)
+![](2023-05-21-14-55-54.webp)
+![](2023-05-21-14-56-17.webp)
 
 ## [Nightcaffe](https://nightcafe.studio/)
 
-![](2023-05-21-14-53-06.jpg)
+![](2023-05-21-14-53-06.webp)
 
 ## [StableDiffusion](stablediffusionweb.com)
 
-![](2023-05-21-14-53-38.jpg)
+![](2023-05-21-14-53-38.webp)
 
 
 # Productivity
@@ -121,7 +121,7 @@ Meeting recordings, transcripts, search
 
 ## [SciSpace Copilot](https://chrome.google.com/webstore/detail/scispace-copilot/cipccbpjpemcnijhjcdjmkjhmhniiick)
 
-![](2023-05-23-13-24-40.jpg)
+![](2023-05-23-13-24-40.webp)
 
 Highlight any text, number or chat and SciSpace Copilot will give you a simple explanation of what it means.
 
@@ -132,18 +132,18 @@ Highlight any text, number or chat and SciSpace Copilot will give you a simple e
 - Get tranaslations and grammar checks
 
 ## [Neeva](https://neeva.com/)
-![](2023-05-23-13-32-55.jpg)
+![](2023-05-23-13-32-55.webp)
 
 ## [Finchat](https://finchat.io/)
-![](2023-05-23-13-35-43.jpg)
+![](2023-05-23-13-35-43.webp)
 generates answers to questions about public companies and investors. To generate accurate answers, FinChat provides reasoning, sources and data.
 
 
 # Software Development
 
 ## Github Copilot
-![](2023-05-24-18-57-57.jpg)
-![](2023-05-24-18-58-34.jpg)
+![](2023-05-24-18-57-57.webp)
+![](2023-05-24-18-58-34.webp)
 ### GitHub Copilot
 **Strengths**. GitHub Copilot excels at generating code snippets and suggestions based on the context of the code being written, said Jorge Torres, co-founder & CEO of MindsDB, a platform designed for democratizing ML.
 
@@ -172,11 +172,11 @@ Jõgi also uses ChatGPT to generate function and unit tests to validate outcomes
 a low-code platform to build web apps you never had time for.
 
 ## [10Web](https://my.10web.io/)
-![](2023-05-23-13-50-36.jpg)
-![](2023-05-23-13-53-07.jpg)
-![](2023-05-23-13-53-58.jpg)
-![](2023-05-23-13-54-17.jpg)
-![](2023-05-23-13-54-47.jpg)
-![](2023-05-23-13-55-09.jpg)
-![](2023-05-23-13-57-00.jpg)
+![](2023-05-23-13-50-36.webp)
+![](2023-05-23-13-53-07.webp)
+![](2023-05-23-13-53-58.webp)
+![](2023-05-23-13-54-17.webp)
+![](2023-05-23-13-54-47.webp)
+![](2023-05-23-13-55-09.webp)
+![](2023-05-23-13-57-00.webp)
 

@@ -1,5 +1,5 @@
 
-![](beefy.md-images/2023-06-06-16-24-56.jpg)
+![](beefy.md-images/2023-06-06-16-24-56.webp)
 At Beefy 'you earn what you stake', regardless if this is a liquidity pool (LP) token or a single asset. In this example, staking CAKE-BNB LP will result in more CAKE-BNB LP over time. This effectively grows your share in the liquidity pool and thus allows for more and more rewards over time [Reference](https://docs.beefy.finance/faq/infographics).
 
 When browsing the vaults on the platform, you will see the annual percentage yield (APY), which takes the frequent compounding into consideration compared to annual percentage rate (APR) which does not. You will also see daily interest percentages and the total amount invested in a vault by all users (TVL).
@@ -27,7 +27,7 @@ Besides handling deposits and withdrawals, the primary function of the vault is 
 
 ## Fees
 
-![](beefy.md-images/2023-06-06-16-26-03.jpg)
+![](beefy.md-images/2023-06-06-16-26-03.webp)
 Fee on the Vault profits is split up
 - distributed back to BIFI stakers
 - allocated to Beefy's treasury,
@@ -63,8 +63,8 @@ Beefy vaults are audited, but this does not mean that a vault is entirely risk f
 
 # Strategies
 
-![](beefy.md-images/2023-06-06-16-13-45.jpg)
-![](beefy.md-images/2023-06-06-16-15-10.jpg)
+![](beefy.md-images/2023-06-06-16-13-45.webp)
+![](beefy.md-images/2023-06-06-16-15-10.webp)
 
 - Each vault and strategy link is hardcoded, and the code has been built to be immutable, so once they are released, they become unstoppable. No one can modify the vaults and strategies.
 
@@ -72,13 +72,13 @@ Beefy vaults are audited, but this does not mean that a vault is entirely risk f
 No, the effect of compounded interest is exponential, not linear. A daily compounded interest of 1% would yield 3678.34% a year.
 
 ## What is a Boost?
-![](beefy.md-images/2023-06-06-16-29-18.jpg)
+![](beefy.md-images/2023-06-06-16-29-18.webp)
 When you deposit in a Beefy vault, you receive a 'receipt' token prefixed with 'moo' in your wallet. When a Boost is available, you may stake that token in the Boost to receive the extra earnings benefit. You earn extra yield on top of your vault earnings!
 
 ## Undertanding Exponential Growth
 
 `growth = (1 + APR)^times`  for instnace `growth = (1 + 100%)^3`
-![](beefy.md-images/2023-06-06-16-30-17.jpg)
+![](beefy.md-images/2023-06-06-16-30-17.webp)
 
 ## Beefy Contracts
 
