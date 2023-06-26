@@ -1,6 +1,6 @@
 # CryptoU Eng Certification: Level 1
 
-![](2023-03-29-14-03-02.jpg)
+![](2023-03-29-14-03-02.webp)
 
 Issuer: coinbase.docebosaas.com
 Date: March 17 2023
@@ -23,7 +23,7 @@ Date: March 17 2023
 
 
 # Application Security and Secure Coding Training
-![](2023-03-29-14-11-16.jpg)
+![](2023-03-29-14-11-16.webp)
 
 Issuer: codebashing.com
 Issue date: Jun 15 2022

@@ -104,8 +104,8 @@ FastChat is an open platform for training, serving, and evaluating large languag
 Project [github.com](https://github.com/CompVis/stable-diffusion)
 
 ## [DiffusionBee](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)
-![](OpenSourceProjects.md-images/2023-06-20-16-02-23.png)
-![](OpenSourceProjects.md-images/2023-06-20-16-12-17.png)
+![](OpenSourceProjects.md-images/2023-06-20-16-02-23.webp)
+![](OpenSourceProjects.md-images/2023-06-20-16-12-17.webp)
 # Software Engineering
 ##  [StarCoder]()
 

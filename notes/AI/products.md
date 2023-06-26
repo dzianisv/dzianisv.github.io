@@ -97,6 +97,9 @@ The quality of images close to midjourney, pictures are beautiful.
 ![](2023-05-21-14-53-38.webp)
 
 
+## [QR code](https://huggingface.co/spaces/huggingface-projects/QR-code-AI-art-generator)
+![](products.md-images/2023-06-26-13-44-58.webp)
+![](products.md-images/2023-06-26-13-46-15.webp)
 # Productivity
 
 # [Fireflies](https://chrome.google.com/webstore/detail/fireflies-summarize-meeti/meimoidfecamngeoanhnpdjjdcefoldn)

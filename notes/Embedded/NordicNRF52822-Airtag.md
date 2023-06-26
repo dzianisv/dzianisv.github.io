@@ -3,7 +3,7 @@
 I did a first prototype on [micro:bit](https://tech.microbit.org/hardware/) development board.
 
 
-![](NordicNRF52822-Airtag.md-images/2023-06-08-12-55-08.png)
+![](NordicNRF52822-Airtag.md-images/2023-06-08-12-55-08.webp)
 
 | | |
 |-|-|
@@ -25,12 +25,12 @@ OpenHaystack beacon works more time on micro:bit dev board (nRF51822) in compari
 
 But micro:bit dev board is not small, so I continued to look for the better fit.
 And I [found](https://github.com/seemoo-lab/openhaystack/discussions/188)
-![](NordicNRF52822-Airtag.md-images/2023-06-08-12-51-15.png)
+![](NordicNRF52822-Airtag.md-images/2023-06-08-12-51-15.webp)
 this beacon module based on nRF51822 on [~10$ Aliexpress](https://aliexpress.ru/item/1005003671695188.html)
 
 ![](NordicNRF52833-Airtag.md-images/2023-06-08-12-22-38.webp).
 
-![](NordicNRF52822-Airtag.md-images/2023-06-08-12-50-26.png)
+![](NordicNRF52822-Airtag.md-images/2023-06-08-12-50-26.webp)
 Without a case just MCU costs about[1.41$ Aliexpress](https://aliexpress.ru/item/1005003470970655.html). But to flash it  you need SWD interface, like STLink V2 [1.5$ Aliexpress](https://aliexpress.ru/item/32260100115.html) using this [script](https://github.com/ddavidebor/nRF51822-OSX-ST_LINK_V2-Flasher-Script)
 
 Here is STLink v2 -> nRF51822 pinout [Reference](https://habr.com/ru/articles/439148/)
