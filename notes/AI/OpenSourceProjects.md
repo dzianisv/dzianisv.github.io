@@ -86,7 +86,7 @@ chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the
 Koala to ChatGPT and Stanford's Alpaca, Koala's responses were often preferred over Alpaca, and in over half of the cases, Koala's performance was at least tied with ChatGPT. This suggests that Koala performs competitively and effectively in generating responses to user queries.[Reference](https://bair.berkeley.edu/blog/2023/04/03/koala)
 
 ## [FastChat](https://github.com/lm-sys/FastChat)
-FastChat is an open platform for training, serving, and evaluating large language model based chatbots. The core features include:
+FastChat is an open platform for training, serving, and evaluating large language model based cha   tbots. The core features include:
 
 - The weights, training code, and evaluation code for state-of-the-art models (e.g., Vicuna, FastChat-T5).
 - A distributed multi-model serving system with Web UI and OpenAI-compatible RESTful APIs.
@@ -102,6 +102,10 @@ FastChat is an open platform for training, serving, and evaluating large languag
 [Demo](https://stablediffusionweb.com/#demo)
 
 Project [github.com](https://github.com/CompVis/stable-diffusion)
+
+## [DiffusionBee](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)
+![](OpenSourceProjects.md-images/2023-06-20-16-02-23.png)
+![](OpenSourceProjects.md-images/2023-06-20-16-12-17.png)
 # Software Engineering
 ##  [StarCoder]()
 
@@ -114,6 +118,25 @@ StarCoderBase is trained on 80+ programming languages for 1T tokens. Since a lot
 The data curation probably made up 60-80% of the whole project. There were two main ingredients to create a good pretraining dataset. First, we applied strong near-deduplication where similar files are removed. It might sound counterintuitive, but first strongly near-deduplicating the dataset allows you to safely train for a few epochs without performance degradation. Second, for each file extension we examined at least 100 samples and derived heuristics to exclude low quality files (e.g. data or auto-generated files). In addition we labelled a PII dataset for code to train a PII detector. At that scale even applying that PII model to the whole dataset required several hundred GPU hours. Also, we excluded code files from users that had opted out of the dataset.
 
 Finally, for the training we used 512 A100 GPUs for 24 days to train the model. The training was extremely smooth. We had some restarts due to hardware failures but those mostly happened automatically. Training at that scale with modern tools such as Megatron and using BF16 is very smooth.
+
+## [CodeTF](https://github.com/salesforce/codetf)
+| Model        | Size                                                                                                                          | Tasks                                                                                                                                                                                                     |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| CodeT5       | Base, Base-multi-sum, Base-translate-cs, Base-translate-java, Base-sum, Base-clone, Base-defect                              | Pretrained, NL to Code, Refine, Translation (CS to Java, Java to CS), Summarization (Python, Go, PHP, JavaScript, Java, Ruby), Clone detection, Defect prediction |
+| CodeT5+      | Plus-instruct-16B, Plus-16B, Plus-6B, Plus-2B, Plus-770M-python, Plus-770M, Plus-220M                                      | Pretrained, NL to Code, Refine , Defect prediction |
+| CodeGen      | Mono: 350M, 2B, 6B, 1B, 3.7B, 7B, 16B<br>Multi: 350M, 2B, 6B<br>NL: 350M, 2B                                           | Pretrained |
+| StarCoder    | 15.5B                                                                                                                         | Pretrained |
+| SantaCoder   | 1.1B                                                                                                                          | Pretrained |
+| GPT-NeoX     | 20B                                                                                                                           | Pretrained |
+| GPT-Neo      | 1.3B                                                                                                                          | Pretrained |
+| GPT-J        | 6B                                                                                                                            | Pretrained |
+| Incoder      | 6B                                                                                                                            | Pretrained |
+| CodeParrot   | Small-python (110M), Small-multi(110M), 1.5B                                                                                   | Pretrained |
+| CodeBERT     | CodeBERT-base, UnixCoder-base, CodeBERTa-small                                                                                 | Pretrained |
+
+## [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT)
+
+
 
 ## Proxies
 

@@ -79,3 +79,6 @@ I created this tool to create a "How I spend this year" social media video. Use 
 
 ## [Embeded Linux tools](https://github.com/dzianisv/utils/blob/master/bin/chroot-arm)
 If you  like to play with Armbian and Single Board Computers like as RaspberryPi, OrangePi, BananaPi (like me) you will probably will like this set of scripts I use to boostrap images and setup basic staff using chroot on your host Linux machine.
+
+## [Proxy Tester](https://github.com/dzianisv/proxies-tester)
+Node.js tool to testt asyncronously througput of a huge list of public proxies
