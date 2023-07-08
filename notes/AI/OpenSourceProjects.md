@@ -142,3 +142,8 @@ Finally, for the training we used 512 A100 GPUs for 24 days to train the model. 
 
 - [Python, gpt4free](https://github.com/xtekky/gpt4free
 - [Python, Poe](https://github.com/ading2210/poe-api)
+
+## [DocTR](https://github.com/mindee/doctr)
+![](OpenSourceProjects.md-images/2023-07-03-15-21-23.webp)
+
+[Live Demo](https://huggingface.co/spaces/mindee/doctr)

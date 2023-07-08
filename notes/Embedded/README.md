@@ -5,6 +5,6 @@
 - [OpenWrt-LTE-Router-Setup.md](OpenWrt-LTE-Router-Setup.md)
 - [OpenWrtDualWiFi.md](OpenWrtDualWiFi.md)
 - [OpenwrtCheatsheet.md](OpenwrtCheatsheet.md)
+- [OrangePi4-LTS-Photoprism.md](OrangePi4-LTS-Photoprism.md)
 - [OrangePiZero-Armbian-Router.md](OrangePiZero-Armbian-Router.md)
 - [OrangePiZero-Openwrt-3g-Router.md](OrangePiZero-Openwrt-3g-Router.md)
-- [UsbAutomount.md](UsbAutomount.md)
