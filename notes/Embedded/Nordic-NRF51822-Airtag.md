@@ -65,16 +65,7 @@ I found a few instruction on how to flash nrf51822 using openocd. The most relev
 
 Then `export PUBKEY=<advertisement key>` and patch an firmware image with a new key. To patch the firmware I have used `key-injector.py` script.
 
-```bash
-export PUBKEY=4jSeYlz7GAhKYQBjXS1Ku06A5+UjV2CfvEATNw==
-firmware=opnehaystack-nrf51822-firmware.bin
-
-./key-injector.py < /Applications/OpenHaystack.app/Contents/Resources/firmware.bin > $firmware
-
-openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg -c "init; halt; nrf51 mass_erase; program $firmware verify; program $firmware; resume;"
-```
-
-```python3 key-injector.py
+```python3
 #!/usr/bin/env python3
 import sys
 import re
@@ -86,6 +77,16 @@ decoded_bytes = base64.b64decode(PUBKEY)
 data = sys.stdin.buffer.read()
 output_string = re.sub(b"OFFLINEFINDINGPUBLICKEYHERE!", decoded_bytes, data)
 sys.stdout.buffer.write(output_string)
+```
+
+
+```bash
+export PUBKEY=4jSeYlz7GAhKYQBjXS1Ku06A5+UjV2CfvEATNw==
+firmware=opnehaystack-nrf51822-firmware.bin
+
+./key-injector.py < /Applications/OpenHaystack.app/Contents/Resources/firmware.bin > $firmware
+
+openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg -c "init; halt; nrf51 mass_erase; program $firmware verify; program $firmware; resume;"
 ```
 
 After flashing connect a battery and mark the the "device" in openhaystack as "Deployed". ![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-10-03.webp)
