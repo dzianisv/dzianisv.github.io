@@ -1,7 +1,7 @@
 - [ESP32-Baremetal-Airtag.md](ESP32-Baremetal-Airtag.md)
 - [ESP32-Flashing.md](ESP32-Flashing.md)
 - [ESP32-peripherals.md](ESP32-peripherals.md)
-- [NordicNRF52822-Airtag.md](NordicNRF52822-Airtag.md)
+- [Nordic-NRF51822-Airtag.md](Nordic-NRF51822-Airtag.md)
 - [OpenWrt-LTE-Router-Setup.md](OpenWrt-LTE-Router-Setup.md)
 - [OpenWrtDualWiFi.md](OpenWrtDualWiFi.md)
 - [OpenwrtCheatsheet.md](OpenwrtCheatsheet.md)
