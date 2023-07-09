@@ -91,4 +91,4 @@ openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg -c "init; halt; nrf51 mas
 
 After flashing connect a battery and mark the the "device" in openhaystack as "Deployed". ![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-10-03.webp)
 
- Enjoy!
+Enjoy!
