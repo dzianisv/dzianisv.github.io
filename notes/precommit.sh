@@ -23,4 +23,5 @@ for dir in `find . -type d`; do
 done
 
 ./markdown-optimize-images.py
+find . -type f -iname "*.md" -exec git add {} \;
 find . -type f -iname "*.webp" -exec git lfs track {} \;

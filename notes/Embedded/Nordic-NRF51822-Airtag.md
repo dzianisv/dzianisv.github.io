@@ -69,7 +69,7 @@ I found the following pinout for my board to connect to STLink v2, you need the 
 ## Flashing
 
 I found a few instruction on how to flash nrf51822 using openocd. The most relevant was at this [thread](https://github.com/seemoo-lab/openhaystack/issues/35#issuecomment-828338751
-). To flash an openhaystack firmware, you need to create a new devices in the app and the export Advertisement key as base64 string.
+). To flash an openhaystack firmware, you need to create a new devices in the app and the export `Advertisement key` as base64 string.
 
 ![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-09-24.webp)
 

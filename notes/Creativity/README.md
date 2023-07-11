@@ -1,0 +1,1 @@
+- [DavinchiResolveQuickNotes.md](DavinchiResolveQuickNotes.md)

@@ -21,15 +21,15 @@ Another approach is horizontal scaling — adding more hardware to the blockchai
 
 ## L2
 
-|L1|L2|Bridge Mechanism|Txps|
-|-|-|-|-|
-|Ethereum|Polygon|PoS Sidechain|[7k](https://polygon.technology/solutions/polygon-pos), [but](https://coinchapter.com/matics-7200-transactions-per-second-claim-a-joke-heres-why/)|
-|Ethereum|Optimism|Optimistic Rollup|[2k](https://pixelplex.io/blog/polygon-vs-arbitrum-vs-optimism-comparison/)
-|Ethereum|Arbirtrum|Optimistic Rollup|[319k](https://thedefiant.io/arbitrum-transactions-quadruple-after-upgrade)
-|Ethereum|StarkNet|zk-Rollup|
+|L1|L2|Bridge Mechanism|Txps|Transaction cost|
+|-|-|-|-|-|
+|Ethereum|Polygon|PoS Sidechain|[7k](https://polygon.technology/solutions/polygon-pos), [but](https://coinchapter.com/matics-7200-transactions-per-second-claim-a-joke-heres-why/)|[0.002MATIC * 0.7378$/MATIC ~ 0.0014$](https://polygonscan.com/tx/0xd30e90ce737f479f8bd21c8ed0869113d118828553164259ec295a160de37825)
+|Ethereum|Optimism|Optimistic Rollup|[2k](https://pixelplex.io/blog/polygon-vs-arbitrum-vs-optimism-comparison/)|[0.06$](https://optimistic.etherscan.io/tx/0xc83fdeff1e4f9e62495b06eabc7a0ea6ad0abb643c63c69b7279d17eb1ea4100)
+|Ethereum|Arbirtrum|Optimistic Rollup|[319k](https://thedefiant.io/arbitrum-transactions-quadruple-after-upgrade)|[0.04$](https://arbiscan.io/tx/0x8f6cc7ff4c0b3fc1965e3a987f189ba5420148b04fae97ffd027f59d2189600a)
+|Ethereum|StarkNet|zk-Rollup||
 |Ethereum|zkSync|zk-Rollup|
-|Ethereum|[Scroll](https://scroll.io/)|zk-Rollup|
-|Ethereum|[Base](base.org)|Optimistic Rollup||
+|Ethereum|[Scroll](https://scroll.io/)|zk-Rollup||[0.002$](https://scrollscan.co/tx/0xc4c5d9d6d1434ed7502bc4e83542175bef4ce8778301408a63dd3145d7f35809)
+|Ethereum|[Base](base.org)|Optimistic Rollup||Testnet
 
 
 Arbitrum and Optimism combined represent almost 80% of the entire layer-2 ecosystem, according to L2beat.[4]
