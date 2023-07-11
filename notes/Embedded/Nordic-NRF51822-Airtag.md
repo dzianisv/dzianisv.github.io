@@ -1,6 +1,13 @@
+
 # Noridic nRF51822 Airtag
 
+## Intro. What is OpenHaystack?
+
+In a world of proprietary technologies, one platform dares to offer a new wave of DIY tech freedom: OpenHaystack. This groundbreaking framework serves as a canvas for tech enthusiasts looking to create their own "AirTags" for Apple's Find My network. Whether you're a seasoned developer or a curious hobbyist, OpenHaystack presents an intriguing opportunity to learn, explore, and create, bypassing the restrictions of off-the-shelf solutions. This article dives into the intriguing world of OpenHaystack, breaking down its capabilities, potential, and exploring how it's empowering a whole new generation of tech innovators. Let's embark on this journey and discover how OpenHaystack is making waves in the realm of decentralized tracking.
+
 I did a first prototype of OpenHaystakTracker using [micro:bit](https://tech.microbit.org/hardware/) development board.
+
+## First prototypes
 
 
 ![](images/2023-06-08-12-55-08.webp)
@@ -15,7 +22,7 @@ I did a first prototype of OpenHaystakTracker using [micro:bit](https://tech.mic
 |Debug|SWD, jlink/OB
 
 ![](images/microbit-airtag.webp)
-![](images/2023-06-08-12-38-39.webp)
+
 
 ## ESP32 vs nRF51822 Power Conumption
 
@@ -50,8 +57,11 @@ openocd -f interface/stlink.cfg -f target/nrf51.cfg -c init -c "reset halt" ^
 ```
 
 ## Dev Board
-![Board Connected 1](images/nrf51822-1.webp)
-![Board Connected 2](images/nrf51822-1.webp)
+
+Ok, I ordered nrf51822 to build a second prototype on bare-metal MCU. It looks like this
+
+![Board Connected 2](images/nrf51822-front.webp)
+![Board Connected 1](images/nrf51822-back.webp)
 
 I found the following pinout for my board to connect to STLink v2, you need the following pins  SWDIO, SWDCLK, VDD, GND
 ![](images/2023-07-09-08-34-46.webp)
@@ -92,3 +102,7 @@ openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg -c "init; halt; nrf51 mas
 After flashing connect a battery and mark the the "device" in openhaystack as "Deployed". ![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-10-03.webp)
 
 Enjoy!
+
+## Reference
+
+[](https://adamcatley.com/AirTag.html#power-traces)
