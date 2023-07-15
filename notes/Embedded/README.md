@@ -3,6 +3,7 @@
 - [ESP32-peripherals.md](ESP32-peripherals.md)
 - [Nordic-NRF51822-Airtag.md](Nordic-NRF51822-Airtag.md)
 - [OpenWrt-LTE-Router-Setup.md](OpenWrt-LTE-Router-Setup.md)
+- [OpenWrt-WireguardPirvateLan.md](OpenWrt-WireguardPirvateLan.md)
 - [OpenWrtDualWiFi.md](OpenWrtDualWiFi.md)
 - [OpenwrtCheatsheet.md](OpenwrtCheatsheet.md)
 - [OrangePi4-LTS-Photoprism.md](OrangePi4-LTS-Photoprism.md)
