@@ -122,3 +122,6 @@ There has to be wireguard interface (`wg0` in my case) and `br-privateLan`.
 ```
 
 ## Enjoy!
+
+
+Then next step, is to change script to create a `privateLan` for each wireguard interface configured on the router. That will allow to setup multiple SSID for each VPN.
