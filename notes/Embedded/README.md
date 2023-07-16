@@ -2,6 +2,7 @@
 - [ESP32-Flashing.md](ESP32-Flashing.md)
 - [ESP32-peripherals.md](ESP32-peripherals.md)
 - [Nordic-NRF51822-Airtag.md](Nordic-NRF51822-Airtag.md)
+- [OpenWrt-GitServiceDiscovery.md](OpenWrt-GitServiceDiscovery.md)
 - [OpenWrt-LTE-Router-Setup.md](OpenWrt-LTE-Router-Setup.md)
 - [OpenWrt-WireguardPirvateLan.md](OpenWrt-WireguardPirvateLan.md)
 - [OpenWrtDualWiFi.md](OpenWrtDualWiFi.md)
