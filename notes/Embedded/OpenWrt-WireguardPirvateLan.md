@@ -2,11 +2,13 @@
 
 So, I had some free time and thought - why not make something cool out of this boring OpenWRT router? And here's how I did it 👇
 
+![](OpenWrt-WireguardPirvateLan.md-images/2023-07-21-14-43-42.webp)
+
 ### 1️⃣ Configure a `privateLan` openwrt network
 
 First things first, I created a `privateLan` network with IP 192.168.64.1/24 and routing table `privateLan` which makes the IP packets from `privateLan` interface to go to `wg` Wireguard VPN interface.
 
-Don't worry about copying and pasting the script, I got you covered! Check out the [link here](https://github.com/dzianisv/utils/blob/f44fa7a238135f7e92197e88bc478c5bf42777a4/bin/openwrt-configure-privateLan.sh). 
+Don't worry about copying and pasting the script, I got you covered! Check out the [link here](https://github.com/dzianisv/utils/blob/f44fa7a238135f7e92197e88bc478c5bf42777a4/bin/openwrt-configure-privateLan.sh).
 
 ### 2️⃣ Configure Wireguard
 
@@ -16,7 +18,7 @@ Next up, I installed the packages `luci-proto-wireguard`, `luci-app-wireguard` a
 
 ### 3️⃣ Add a gateway for the Wireguard interface
 
-To set a gateway for my `wg0` interface, I ran the command: 
+To set a gateway for my `wg0` interface, I ran the command:
 
 ```bash
 uci set network.wg0.gateway=10.2.0.1
@@ -56,9 +58,11 @@ ip rule show
 There has to be rule for a privateLan network 192.168.64.1/24.
 
 4. Check network interfaces
-```bash 
+```bash
 ip -4 a
 ```
 There has to be a `wg0` interface and `br-privateLan`.
 
 That's all folks! Now, I'm enjoying seamless internet experience without any hassles of network congestion. Gotta thank my free time for this banger idea. 😜
+
+
