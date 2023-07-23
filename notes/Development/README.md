@@ -2,3 +2,4 @@
 - [ChromeNexExport.md](ChromeNexExport.md)
 - [CloudStorageComparison.md](CloudStorageComparison.md)
 - [EKS-VolumeModification.md](EKS-VolumeModification.md)
+- [HotSpotshield-Extension-Analyzis.md](HotSpotshield-Extension-Analyzis.md)
