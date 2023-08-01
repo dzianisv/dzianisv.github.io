@@ -2,8 +2,8 @@
 
 ## L1
 
-|Blockchain|Consensus|Txps Practical|Txps Theoretical|Execution Environment|Notes  |Transaction finality (s)|
-|----------|---------|--------------|----------------|---------------------|-------|-------|
+|Blockchain|Consensus|Txps Practical|Txps Theoretical|Execution Environment|Notes  |Transaction finality (s)|Token Send Fee|
+|----------|---------|--------------|----------------|---------------------|-------|-------|------|
 |Bitcoin|PoW-SHA256|7|-|Bitcoin Script|-|
 |Bitcoin Cash|PoW-SHA256|60|-|Bitcoin Script|-|
 |Litecoin|PoW-Scrypt|54|-|Bitcoin Script|-|
@@ -11,7 +11,7 @@
 |Cosmos/Tendermint|BFT|[4k-16k](https://www.gemini.com/cryptopedia/cosmos-ignite-crypto-consensus-tendermint-ecosystem)|[ABCI](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html)|
 |Solana|Proof-of-History   |[710k](https://solana.com/solana-whitepaper.pdf)|LLVM, PBF|
 |Near|Proof-of-Stake     ||100k|Web Assembly||2.5|
-|Avalanche|BFT, Snowball, Proof-of-Stake||[4.5k](https://support.avax.network/en/articles/5325146-what-is-transactional-throughput-tps)|AVM,EVM,Each subnet could implement their own|
+|Avalanche|BFT, Snowball, Proof-of-Stake||[4.5k](https://support.avax.network/en/articles/5325146-what-is-transactional-throughput-tps)|AVM,EVM,Each subnet could implement their own|||[0.01$](https://snowtrace.io/tx/0x4ee9cfeff66927113e967afd7f4c08e77561994a4a2ef88dc6a767e62959eb86)
 |Aptos|BFT Proof-of-Stake|160k||Move||<1|
 |[Sui](https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf)|Byzantine consistent broadcast PoS|[120k](https://docs.sui.io/learn/about-sui)||Move|||
 
@@ -30,6 +30,7 @@ Another approach is horizontal scaling — adding more hardware to the blockchai
 |Ethereum|zkSync|zk-Rollup|
 |Ethereum|[Scroll](https://scroll.io/)|zk-Rollup||[0.002$](https://scrollscan.co/tx/0xc4c5d9d6d1434ed7502bc4e83542175bef4ce8778301408a63dd3145d7f35809)
 |Ethereum|[Base](base.org)|Optimistic Rollup||Testnet
+|Ethereum|[Polygon zkEVM]()|zk-Rollup|Beta
 
 
 Arbitrum and Optimism combined represent almost 80% of the entire layer-2 ecosystem, according to L2beat.[4]
