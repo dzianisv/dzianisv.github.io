@@ -12,8 +12,10 @@
 
 ## Bridge agregator
 
-- [Jumper](https://jumper.exchange )
-
+- [Jumper](https://jumper.exchange ) | Didn't find USDC @ Polygon -> AVAX @ Avalanche
+- [Bungee](https://www.bungee.exchange/) | Didn't find USDC @ Polygon -> AVAX @ Avalanche
+- [Woo](https://fi.woo.org/) | USDC @ Polygon -> AVAX @ Avalanche is available, fee 0.849$/1000$.
+- [Rubic](https://app.rubic.exchange/) |  USDC @ Polygon -> AVAX @ Avalanche is available
 
 ## Hacked
 
