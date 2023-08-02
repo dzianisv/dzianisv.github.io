@@ -1,3 +1,57 @@
+# Yeild Optimizers
+
+## [Yearn.finance]()
+Yearn Finance is DeFi’s premier yield aggregator. Giving individuals, DAOs and other protocols a way to deposit digital assets and receive yield.
+
+Chains: Ethereum, Optimism, Fantom, Arbitrum
+
+Example of APY on 2023-07-08
+| Token | APY|
+|-------|----|
+USDC @ Optimism|5.89%
+USDT @ Optimism|5.50%
+USDC @ Ethereum|1.86%
+ETH @ Ethereum|2.90%
+Liqudity Provider yCRV @ Ethereum|32.34%
+Staked yCRV @ Ethereum | 35.17%
+USDC @ Fantom | 1.35%
+
+
+## [Beefy](https://app.beefy.com/)
+Beefy is a Decentralized, Multichain Yield Optimizer that allows its users to earn compound interest on their crypto holdings
+
+Chains: Ethereum, Polygon, Arbitrum, Optimism, Fantom, Avalanche, BNB, zkSync, Fuse, Metis, Celo, Cronos, Canto
+
+
+Token | Platform | APY
+------|----------|-----
+USDC @ Ethereum | Conic | 8.29%
+crvUSD @ Etheruem | Conic | 11.83%
+ETH @ Optimism | Exactly | 4.78%
+ETH @ Optimism | Hop | 4.51%
+USDC @ Optimism | Hop | 4.36%
+USDC @ Avalanche | Stargate | 4.18%
+
+## [Harves.finance](https://app.harvest.finance/)
+
+Yeild optimizer, supports Ethereum, Polygon, Arbitrum
+https://app.harvest.finance/?asset=stablecoins
+
+
+## [Tuplip](https://tulip.co/)
+
+For Solana DeFi
+
+## [ACryptoS](https://app.acryptos.com/vaults/?s=apy&a=flow)
+
+Not so much available strategies for stablecoins
+
+## [Exponential.fi](https://exponential.fi/)
+
+Allows to easily discover, assess and invest in liquidity pools across chains.
+
+# Landing pools
+
 ## [AAVE](https://docs.aave.com/hub/)
 Liqudity-poll for lending or borrowing.
 ![](farming.md-images/2023-07-08-18-08-50.webp)
@@ -30,35 +84,3 @@ USDC @ [Polygon](https://app.compound.finance/markets?market=usdc-polygon)|  1.6
 USDC @ [Arbitrum](https://app.compound.finance/markets?market=usdc.e-arb) |  0.59%
 Compound Treasury | 4%
 
-
-# [Yearn.finance]()
-Yearn Finance is DeFi’s premier yield aggregator. Giving individuals, DAOs and other protocols a way to deposit digital assets and receive yield.
-
-Chains: Ethereum, Optimism, Fantom, Arbitrum
-
-Example of APY on 2023-07-08
-| Token | APY|
-|-------|----|
-USDC @ Optimism|5.89%
-USDT @ Optimism|5.50%
-USDC @ Ethereum|1.86%
-ETH @ Ethereum|2.90%
-Liqudity Provider yCRV @ Ethereum|32.34%
-Staked yCRV @ Ethereum | 35.17%
-USDC @ Fantom | 1.35%
-
-
-## [Beefy](https://app.beefy.com/)
-Beefy is a Decentralized, Multichain Yield Optimizer that allows its users to earn compound interest on their crypto holdings
-
-Chains: Ethereum, Polygon, Arbitrum, Optimism, Fantom, Avalanche, BNB, zkSync, Fuse, Metis, Celo, Cronos, Canto
-
-
-Token | Platform | APY
-------|----------|-----
-USDC @ Ethereum | Conic | 8.29%
-crvUSD @ Etheruem | Conic | 11.83%
-ETH @ Optimism | Exactly | 4.78%
-ETH @ Optimism | Hop | 4.51%
-USDC @ Optimism | Hop | 4.36%
-USDC @ Avalanche | Stargate | 4.18%
