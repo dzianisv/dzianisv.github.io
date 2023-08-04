@@ -6,4 +6,6 @@
 - [003.2_Beefy.md](003.2_Beefy.md)
 - [003_Farming.md](003_Farming.md)
 - [004_DEX.md](004_DEX.md)
+- [005_CrossChainCommunication.md](005_CrossChainCommunication.md)
+- [Solana.md](Solana.md)
 - [anonymous.md](anonymous.md)
