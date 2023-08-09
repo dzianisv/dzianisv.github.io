@@ -19,6 +19,10 @@ AssistantPlato is an open-source project aimed at providing a comprehensive and 
 
 LXDbox is an LXD containers management tool. It provides a more efficient alternative to Virtual Machines (kvm/virtualbox), enabling you to run desktop applications inside LXD containers. This is especially useful when you need multiple separate work/dev environments on a single host machine. Key features include creating a container with a Guest OS, sharing a folder with a host OS, and proxying Desktop environment, Video/Camera devices, PulseAudio, and USB devices from the host OS. It also enables KVM, useful for running an Android Emulator or other VMs inside the container.
 
+## [Photos for Documents](https://github.com/dzianisv/Photo4Documents)
+Needed a new passport photo so I created an ML app this weekend that removes backgrounds, aligns faces, and crops to passport size. It utilizes face_recognition dlib-powered library for facial detection and carvekit with tracer_7b pretrained model for background removal. Now I have unlimited great passport photos without going to a photo center! Machine learning is amazing for automating repetitive tasks. Especially I liked face_recognition lib, because it allows align faces from bad photos. I tested it on my photos and on photos from Kaggle dataset. Check out my GitHub for the code and demos!
+
+
 ## [vpngate-client](https://github.com/dzianisv/vpngate-client)
 
 This free, open-source OpenVPN service discovers public VPN servers on [vpngate.net](https://vpngate.net), performs health checks, and then connects to them. Health checks are performed during service work hours. If the OpenVPN service fails or a speed test shows poor results (<0.5MBps), vpngate-client switches to the next available public OpenVPN server. Features include a systemd service, .deb packages, fault tolerance, and the ability to run in the Linux Network Namespace.

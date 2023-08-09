@@ -32,6 +32,25 @@ ETH @ Optimism | Hop | 4.51%
 USDC @ Optimism | Hop | 4.36%
 USDC @ Avalanche | Stargate | 4.18%
 
+## [Convex](https://www.convexfinance.com/stake)
+Supported chains:
+- Ethereum
+- Arbitrum One
+- Polygon
+
+USDC+USDT @ Arbitrum |  4.29%
+amDAI​+amUSDC​+amUSDT @ Polygon | 1.93%
+
+
+## [Penpie](https://docs.penpiexyz.io/penpie-ecosystem/pendle-finance)
+Supported Chains
+- Ethereum
+- Arbitrum One
+- Binance Chain
+
+Pendle Finance is a permissionless DeFi yield-trading protocol, currently built on Ethereum, Arbitrum & BNB Chain where users can execute various yield management strategies.
+
+
 ## [Harves.finance](https://app.harvest.finance/)
 
 Yeild optimizer, supports Ethereum, Polygon, Arbitrum
