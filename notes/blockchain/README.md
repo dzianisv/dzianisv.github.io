@@ -7,5 +7,7 @@
 - [003_Farming.md](003_Farming.md)
 - [004_DEX.md](004_DEX.md)
 - [005_CrossChainCommunication.md](005_CrossChainCommunication.md)
+- [005_DeFI.md](005_DeFI.md)
+- [006_CEX.md](006_CEX.md)
 - [Solana.md](Solana.md)
 - [anonymous.md](anonymous.md)
