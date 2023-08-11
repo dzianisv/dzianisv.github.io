@@ -1,6 +1,7 @@
 ## DFU
-- Donwload DFU bootloader from https://github.com/devanlai/dapboot
 - Bootloader for STM32F103 boards, for use with the Arduino_STM32 repo and the Arduino IDE:  https://github.com/rogerclarkmelbourne/STM32duino-bootloader/blob/master/binaries/maple_mini_boot20.bin
+- Donwload DFU bootloader from https://github.com/devanlai/dapboot. I tried this but I didn't manage to start a bootloader on the board by pressing boot0 and reset.
+
 - Maple DFU: https://github.com/jonatanolofsson/maple-bootloader
 - LeafLabs DFU: http://github.com/leaflabs/maple-bootloader
 
@@ -69,3 +70,12 @@ There is a webusb api that allows to flash MCU using Browser and JS API. Here is
 I created a simple timer project using Platform.io Arduino-compatible abstractions for STM32F103 and configured to upload a firmware over [DFU](https://docs.platformio.org/en/latest/boards/ststm32/maple_mini_b20.html) bootloader in `platform.ini`
 
 ![](img/2023-08-10-00-02-01.webp)
+
+
+```
+[env:maple_mini_origin]
+platform = ststm32
+board = maple_mini_origin
+framework = arduino
+upload_protocol = dfu
+```
