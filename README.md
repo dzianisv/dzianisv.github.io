@@ -22,6 +22,10 @@ LXDbox is an LXD containers management tool. It provides a more efficient altern
 ## [Photos for Documents](https://github.com/dzianisv/Photo4Documents)
 Needed a new passport photo so I created an ML app this weekend that removes backgrounds, aligns faces, and crops to passport size. It utilizes face_recognition dlib-powered library for facial detection and carvekit with tracer_7b pretrained model for background removal. Now I have unlimited great passport photos without going to a photo center! Machine learning is amazing for automating repetitive tasks. Especially I liked face_recognition lib, because it allows align faces from bad photos. I tested it on my photos and on photos from Kaggle dataset. Check out my GitHub for the code and demos!
 
+## [ERC4626 AssetManager](https://github.com/dzianisv/DeFiStrategyManager)
+This is Solidity smart-contract that could be deployed to any EVM-enabled chains (Ethereum, Optimism, Avalanche-C, BNB, Arbitrum, Polygon) for ERC4626 LiquidityPool Vault automated portfolio management.
+`reinvest()` allows to choose best top-perfoming Vaults and reinvest to it.
+
 
 ## [vpngate-client](https://github.com/dzianisv/vpngate-client)
 
