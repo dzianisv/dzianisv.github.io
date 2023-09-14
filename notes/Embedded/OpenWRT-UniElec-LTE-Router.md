@@ -8,11 +8,15 @@ After doing some research online, I found out about using a WiFi router with a b
 
 For the hardware, I went with:
 
-[40$ UniElec U7628-01](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.41334aa6mFtUZ1&sku_id=64789943590)
+- [40$ UniElec U7628-01](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.41334aa6mFtUZ1&sku_id=64789943590)
+
+![Alt text](Unielec-U7628/img2.webp)
+
+
+
+- [18$ LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057)
 
 ![](2023-09-14-00-45-21.webp)
-[18$ LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057)
-
 
 Installing the modem into the router was very easy - I just had to insert it into the PCI-E slot and secure it with a screw. Flashing the router with OpenWRT was a bit more involved but I found a good [guide](https://openwrt.org/toh/unielec/u7628-01) online that walked through the process.
 
