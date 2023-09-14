@@ -17,7 +17,7 @@ The UniElec U7628-01 features a 580MHz MediaTek MT7628AN processor, 64MB of DDR2
 
 - [18$ LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057)
 
-![](2023-09-14-00-45-21.webp)
+![](img/2023-09-14-00-45-21.webp)
 
 ## Setup
 
@@ -42,7 +42,12 @@ opkg update
 opkg install luci luci-proto-wireguard luci-app-wireguard wireguard-tools kmod-usb-net-cdc-ether usb-modeswitch luci-proto-3g comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan chat
 ```
 
-Once set up, I configured the APN settings for my carrier and set a WiFi password for my new "home" network. After reloading network everything, I was excited to run some speed tests - I was now getting 20Mbps download and 5Mbps upload speeds for the same monthly cost as my old 5Mbps ADSL plan!
+Once set up, I configured the APN settings for my carrier and set a WiFi password for my new "home" network
+
+![](img/2023-09-14-09-57-15.webp)
+![](img/2023-09-14-09-58-02.webp)
+
+After reloading network everything, I was excited to run some speed tests - I was now getting 20Mbps download and 5Mbps upload speeds for the same monthly cost as my old 5Mbps ADSL plan!
 
 This new setup has been working flawlessly for months now. I'm able to have multiple HD video streams, download files much quicker, and make crystal clear video calls. The modem seamlessly fails over to 3G when 4G is not available, so I haven't had any interruptions. And because WiFi is integrated, I now have better wireless coverage across my entire house.
 
