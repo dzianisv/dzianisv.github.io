@@ -2,6 +2,8 @@
 
 Living in a rural area, I've been stuck with only having access to ADSL internet plans that max out at 5Mbps download speeds. While usable, I've always been envious of friends in the city who can get fiber optic plans with 100Mbps or more. I got tired of dealing with sluggish video calls, long download times, and buffering when trying to stream HD videos. I decided to look into ways I could upgrade my internet speeds without having to move or pay a lot more money.
 
+![Alt text](Unielec-U7628/img2.webp)
+
 After doing some research online, I found out about using a WiFi router with a built-in PCI-Express slot and a compatible 3G/4G USB modem as a potential solution. The router acts as a bridge, taking the cellular signal from the modem and converting it into a private WiFi network and wired LAN ports. Best of all, some affordable options specifically designed for this purpose are available.
 
 For the hardware, I went with:
@@ -14,6 +16,8 @@ For the hardware, I went with:
 
 Installing the modem into the router was very easy - I just had to insert it into the PCI-E slot and secure it with a screw. Flashing the router with OpenWRT was a bit more involved but I found a good [guide](https://openwrt.org/toh/unielec/u7628-01) online that walked through the process.
 
+![Alt text](Unielec-U7628/img4.webp)![Alt text](Unielec-U7628/img3.webp)
+
 An extra step I need to install LUCI web interface. Because latest openwrt firmware image doesn't have a lot of packages that you could expect. Also, you need to install pacakges for 3g modem support. To this list I add a wireguard client as well.
 
 ```bash
@@ -25,7 +29,7 @@ Once set up, I configured the APN settings for my carrier and set a WiFi passwor
 
 This new setup has been working flawlessly for months now. I'm able to have multiple HD video streams, download files much quicker, and make crystal clear video calls. The modem seamlessly fails over to 3G when 4G is not available, so I haven't had any interruptions. And because WiFi is integrated, I now have better wireless coverage across my entire house.
 
-Probably you can find a cheaper router with 3G modem included, but I looked for a router with OpenWRT support. Because I needed OpenWRT/Linux flexibility to change TTL of my packets.
+Probably you can find a cheaper router with 3G modem included, but I looked for a router with OpenWRT support. Because I needed OpenWRT/Linux flexibility to change TTL of my packets. Why do I need it? So no one has to know that I use it on router :)
 
 ```bash
 echo "nft add rule inet fw4 mangle_forward ip ttl set 65" >> /etc/firewall.user
