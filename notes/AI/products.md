@@ -72,14 +72,14 @@ DALL·E 2 is an AI system that can create realistic images and art from a descri
 
 ![](2023-05-21-14-42-38.webp)
 
-Examples of generated images of "panda on surfboard"
-![DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp](DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp)
-![DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
-![DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
+
+# [Bing Image Creator](https://www.bin.com/images/create)
+
+Under the hood it uses Dallee 2.
+
+![](2023-09-14-00-26-55.webp)
+![](2023-09-14-00-26-28.webp)
+
 
 ## [Playground AI](https://playgroundai.com/login?redirect=/create?)
 The quality of images close to midjourney, pictures are beautiful.
