@@ -2,9 +2,10 @@
 
 Living in a rural area, I've been stuck with only having access to ADSL internet plans that max out at 5Mbps download speeds. While usable, I've always been envious of friends in the city who can get fiber optic plans with 100Mbps or more. I got tired of dealing with sluggish video calls, long download times, and buffering when trying to stream HD videos. I decided to look into ways I could upgrade my internet speeds without having to move or pay a lot more money.
 
-![Alt text](Unielec-U7628/img2.webp)
 
 After doing some research online, I found out about using a WiFi router with a built-in PCI-Express slot and a compatible 3G/4G USB modem as a potential solution. The router acts as a bridge, taking the cellular signal from the modem and converting it into a private WiFi network and wired LAN ports. Best of all, some affordable options specifically designed for this purpose are available.
+
+## Fleet
 
 For the hardware, I went with:
 
@@ -12,13 +13,25 @@ For the hardware, I went with:
 
 ![Alt text](Unielec-U7628/img2.webp)
 
-
+The UniElec U7628-01 features a 580MHz MediaTek MT7628AN processor, 64MB of DDR2 RAM, and 16MB of flash storage. It has 4 10/100 LAN ports, dual band 2.4GHz/5GHz 802.11b/g/n WiFi, and a USB 2.0 port. The built-in PCI-E slot allows adding a compatible 3G/4G modem. This router looks like a constructor from building blocks, I liked it.
 
 - [18$ LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057)
 
 ![](2023-09-14-00-45-21.webp)
 
-Installing the modem into the router was very easy - I just had to insert it into the PCI-E slot and secure it with a screw. Flashing the router with OpenWRT was a bit more involved but I found a good [guide](https://openwrt.org/toh/unielec/u7628-01) online that walked through the process.
+## Setup
+
+Installing the modem into the router was very easy - I just had to insert it into the PCI-E slot and secure it with a screw.
+Some custom build of OpenWrt 17 was already flashed, but I decided to upgrade it to the latest one.
+Flashing the router with OpenWRT was a bit more involved but I found a good [guide](https://openwrt.org/toh/unielec/u7628-01) online that walked through the process.
+
+```bash
+cd /tmp
+wget https://downloads.openwrt.org/releases/22.03.5/targets/ramips/mt76x8/openwrt-22.03.5-ramips-mt76x8-unielec_u7628-01-16m-squashfs-sysupgrade.bin -O sysupgrade.bin
+sysupgrade -v /tmp/sysupgrade.bin
+```
+
+You also could upgrade router over Web interface LUCI.
 
 ![Alt text](Unielec-U7628/img4.webp)![Alt text](Unielec-U7628/img3.webp)
 
@@ -41,5 +54,7 @@ echo "net.ipv4.ip_default_ttl=65" > /etc/sysctl.d/99-ttl.conf
 echo -e "config include\n\toption path '/etc/firewall.user'\n\toption fw4_compatible '1'" >> /etc/config/firewall
 /etc/init.d/network restart
 ```
+
+## Conclusion
 
 For anyone else stuck with slow ADSL or cable internet, I highly recommend looking into this router and modem combination. It delivers fiber-like speeds at a fraction of the cost. Feel free to reach out if you have any questions! I'm happy to help others get better connected.
