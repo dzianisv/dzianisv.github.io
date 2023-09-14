@@ -25,4 +25,13 @@ Once set up, I configured the APN settings for my carrier and set a WiFi passwor
 
 This new setup has been working flawlessly for months now. I'm able to have multiple HD video streams, download files much quicker, and make crystal clear video calls. The modem seamlessly fails over to 3G when 4G is not available, so I haven't had any interruptions. And because WiFi is integrated, I now have better wireless coverage across my entire house.
 
+Probably you can find a cheaper router with 3G modem included, but I looked for a router with OpenWRT support. Because I needed OpenWRT/Linux flexibility to change TTL of my packets.
+
+```bash
+echo "nft add rule inet fw4 mangle_forward ip ttl set 65" >> /etc/firewall.user
+echo "net.ipv4.ip_default_ttl=65" > /etc/sysctl.d/99-ttl.conf
+echo -e "config include\n\toption path '/etc/firewall.user'\n\toption fw4_compatible '1'" >> /etc/config/firewall
+/etc/init.d/network restart
+```
+
 For anyone else stuck with slow ADSL or cable internet, I highly recommend looking into this router and modem combination. It delivers fiber-like speeds at a fraction of the cost. Feel free to reach out if you have any questions! I'm happy to help others get better connected.
