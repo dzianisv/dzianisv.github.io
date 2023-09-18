@@ -50,20 +50,6 @@ Then ask model to perfom the task
 ## Principle 2: Give the model time to think
 
 1. Specify the steps to complete the task
-
-> Perform the following actions:
-> 1 - Summarize the following text delimited by triple \
-> backticks with 1 sentence.
-> 2 - Translate the summary into French.
-> 3 - List each name in the French summary.
-> 4 - Output a json object that contains the following \
-> keys: french_summary, num_names.
-> Separate your answers with line breaks.
-> Text:
-> ```{text}```
-
-Ask for output in a specific format
-
 > Your task is to perform the following actions:
 > 1 - Summarize the following text delimited by
 >  <> with 1 sentence.
@@ -71,7 +57,6 @@ Ask for output in a specific format
 > 3 - List each name in the French summary.
 > 4 - Output a json object that contains the
 >  following keys: french_summary, num_names.
-
 > Use the following format:
 > Text: <text to summarize>
 > Summary: <summary>
