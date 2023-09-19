@@ -24,5 +24,4 @@ done
 
 markdown-optimize-images.py
 find . -type f -iname "*.md" -exec git add {} \;
-find . -type f -iname "*.webp" -exec git lfs track {} \;
 find . -type f -iname "*.webp" -exec git add {} \;
