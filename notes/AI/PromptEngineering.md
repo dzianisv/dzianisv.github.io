@@ -11,7 +11,7 @@ The nice thing that this course is interactive and you can play with ChatGPT on 
 
 ![](img/2023-09-17-23-23-11.webp)
 
-
+# Principles
 ## Princeple 1: Write clear and specific instructions
 
 1. Write the clear and specific instructions
@@ -78,7 +78,7 @@ Then ask model to perfom the task
 > you have done the problem yourself.
 
 
-# Model Limitations
+## Model Limitations
 
 - Hallucination
 ``` python
@@ -102,3 +102,10 @@ How to reduce hallucinations:
 
 
 - Make setatement that sound plausible but are not true
+
+# Interactive Prompt Development
+
+- Try something
+- Analyze where the result does not give what you want
+- Clarify instructions, give more time to think
+- Refine prompts with a batch of examples

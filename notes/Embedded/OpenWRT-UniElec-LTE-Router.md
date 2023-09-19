@@ -1,29 +1,29 @@
-# Quick setup of OpenWRT on UniElec U7628-01 + 3G Modem
+# Boosting My Rural Internet Speed with OpenWRT and a 3G Modem
 
-Living in a rural area, I've been stuck with only having access to ADSL internet plans that max out at 5Mbps download speeds. While usable, I've always been envious of friends in the city who can get fiber optic plans with 100Mbps or more. I got tired of dealing with sluggish video calls, long download times, and buffering when trying to stream HD videos. I decided to look into ways I could upgrade my internet speeds without having to move or pay a lot more money.
+Living in the countryside has its perks, but high-speed internet isn't one of them. I was stuck with a snail-paced 5Mbps ADSL connection, while my city friends boasted about their 100Mbps fiber optic plans. Tired of the buffering and laggy video calls, I decided to take matters into my own hands.
 
+## The Hardware Hunt
 
-After doing some research online, I found out about using a WiFi router with a built-in PCI-Express slot and a compatible 3G/4G USB modem as a potential solution. The router acts as a bridge, taking the cellular signal from the modem and converting it into a private WiFi network and wired LAN ports. Best of all, some affordable options specifically designed for this purpose are available.
+After scouring the internet, I stumbled upon a solution: a WiFi router with a PCI-Express slot and a 3G/4G USB modem. This setup would convert cellular signals into a private WiFi network and wired LAN. The best part? There are budget-friendly options tailored for this.
 
-## Fleet
+### The Router: [UniElec U7628-01](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.41334aa6mFtUZ1&sku_id=64789943590) - $40
 
-For the hardware, I went with:
+![UniElec U7628-01](Unielec-U7628/img2.webp)
 
-- [40$ UniElec U7628-01](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.41334aa6mFtUZ1&sku_id=64789943590)
+This quirky router, reminiscent of building blocks, boasts a 580MHz MediaTek MT7628AN processor, 64MB DDR2 RAM, and 16MB flash storage. With 4 LAN ports, dual-band WiFi, and a USB 2.0 port, it's a steal. The cherry on top? The PCI-E slot for the 3G/4G modem.
 
-![Alt text](Unielec-U7628/img2.webp)
-
-The UniElec U7628-01 features a 580MHz MediaTek MT7628AN processor, 64MB of DDR2 RAM, and 16MB of flash storage. It has 4 10/100 LAN ports, dual band 2.4GHz/5GHz 802.11b/g/n WiFi, and a USB 2.0 port. The built-in PCI-E slot allows adding a compatible 3G/4G modem. This router looks like a constructor from building blocks, I liked it.
-
-- [18$ LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057)
+### The Modem: [LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057) - $18
 
 ![](img/2023-09-14-00-45-21.webp)
 
-## Setup
+## Setting Things Up
 
-Installing the modem into the router was very easy - I just had to insert it into the PCI-E slot and secure it with a screw.
-Some custom build of OpenWrt 17 was already flashed, but I decided to upgrade it to the latest one.
-Flashing the router with OpenWRT was a bit more involved but I found a good [guide](https://openwrt.org/toh/unielec/u7628-01) online that walked through the process.
+Inserting the modem was a breeze. Just pop it into the PCI-E slot and secure it. The router came with a custom OpenWrt 17 build, but I wanted the latest and greatest.
+
+![Alt text](Unielec-U7628/img4.webp)
+![Alt text](Unielec-U7628/img3.webp)
+
+Flashing it with OpenWRT was slightly tricky, but [this guide](https://openwrt.org/toh/unielec/u7628-01) was a lifesaver.
 
 ```bash
 cd /tmp
@@ -32,10 +32,7 @@ sysupgrade -v /tmp/sysupgrade.bin
 ```
 
 You also could upgrade router over Web interface LUCI.
-
-![Alt text](Unielec-U7628/img4.webp)![Alt text](Unielec-U7628/img3.webp)
-
-An extra step I need to install LUCI web interface. Because latest openwrt firmware image doesn't have a lot of packages that you could expect. Also, you need to install pacakges for 3g modem support. To this list I add a wireguard client as well.
+The latest OpenWRT firmware is a bit barebones, so I had to manually install the LUCI web interface and packages for the 3G modem. I also threw in a wireguard client for good measure.
 
 ```bash
 opkg update
@@ -51,7 +48,11 @@ After reloading network everything, I was excited to run some speed tests - I wa
 
 This new setup has been working flawlessly for months now. I'm able to have multiple HD video streams, download files much quicker, and make crystal clear video calls. The modem seamlessly fails over to 3G when 4G is not available, so I haven't had any interruptions. And because WiFi is integrated, I now have better wireless coverage across my entire house.
 
-Probably you can find a cheaper router with 3G modem included, but I looked for a router with OpenWRT support. Because I needed OpenWRT/Linux flexibility to change TTL of my packets. Why do I need it? So no one has to know that I use it on router :)
+# The Perks
+
+Months in, and this setup hasn't missed a beat. HD streaming, faster downloads, and crystal-clear video calls are now the norm. The modem's 3G fallback ensures uninterrupted service, and the integrated WiFi blankets my entire home in strong signal.
+
+For the tech-savvy, OpenWRT's flexibility is a boon. I tweaked the TTL of my packets, ensuring my usage remains under the radar.
 
 ```bash
 echo "nft add rule inet fw4 mangle_forward ip ttl set 65" >> /etc/firewall.user
@@ -60,6 +61,6 @@ echo -e "config include\n\toption path '/etc/firewall.user'\n\toption fw4_compat
 /etc/init.d/network restart
 ```
 
-## Conclusion
+# Wrapping Up
 
-For anyone else stuck with slow ADSL or cable internet, I highly recommend looking into this router and modem combination. It delivers fiber-like speeds at a fraction of the cost. Feel free to reach out if you have any questions! I'm happy to help others get better connected.
+If you're grappling with slow internet, consider this router-modem duo. It's a cost-effective way to enjoy fiber-like speeds. Got questions? Drop a comment, and I'll be happy to assist!
