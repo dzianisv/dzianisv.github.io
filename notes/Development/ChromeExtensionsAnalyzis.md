@@ -38,13 +38,13 @@ Debugging is a crucial part of understanding any code, and Chromium's developer 
 
 First, you need to access the extension's background page. Navigate to `chrome://extensions/` in your browser, and enable Developer mode from the top right corner.
 
-![](2023-06-02-16-15-18.webp)
+![](../img/c99137bb-d093-47a7-af10-f7a86af88af2.webp)
 Once you've done this, you'll see additional details for each installed extension. Look for your extension and click on the `background page` link. This will open a new Developer Tools window specifically for the extension.
 
-![](2023-06-02-16-14-08.webp)
+![](../img/1d55e9f6-5744-44a5-b3e9-a4168f1a90bb.webp)
 In this window, you can utilize the "Console" tab to view output from `console.log` statements in your extension's code. This is invaluable for seeing real-time feedback as your extension runs.
 
-![](2023-06-02-16-13-21.webp)
+![](../img/64348dd6-ccf1-40d8-a0e3-58b84b083651.webp)
 Moreover, the "Sources" tab is where the magic happens for breakpoint debugging. Here, you can view all scripts loaded by the extension. By clicking on a line number, you can set a breakpoint, which will pause execution of the code at that point. This allows you to inspect all variables and the call stack at that moment in time.
 
 Remember, debugging isn't just about squashing bugs, it's also about understanding how the code flows and interacts. So put on your detective hat and start debugging!

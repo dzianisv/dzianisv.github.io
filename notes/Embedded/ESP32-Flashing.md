@@ -1,6 +1,6 @@
 # Bare metal ESP32 flashing
 
-![](ESP32-Flashing.md-images/2023-06-06-22-29-32.webp)
+![](../img/27499817-a127-402c-9ee4-0885be04834f.webp)
 
 GPIO0 Pulled-Up outputs PWM signal at boot, must be LOW to enter flashing mode
 

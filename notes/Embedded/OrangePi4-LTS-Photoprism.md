@@ -1,3 +1,3 @@
 ## UART configuration
 
-![](OrangePi4-LTS-Photoprism.md-images/2023-06-08-18-22-38.webp)
+![](../img/757d4128-7291-496d-b029-6d0110273dad.webp)

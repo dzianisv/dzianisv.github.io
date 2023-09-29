@@ -9,7 +9,7 @@ Give instruction that a smart enough but don't know specific of your task.
 
 The nice thing that this course is interactive and you can play with ChatGPT on the course webpage
 
-![](img/2023-09-17-23-23-11.webp)
+![](../img/3c45cd1c-e533-4116-9b5b-f3e3f3c8aae4.webp)
 
 
 ```python
@@ -172,7 +172,7 @@ Prompt examples
 
 > Translate the following from slang to a business letter ```{text}```
 
-![](img/2023-09-28-21-02-18.webp)
+![](../img/3bff74b1-dc74-47fd-8029-2ca0e08e8dfb.webp)
 
 
 ## Format
@@ -191,7 +191,7 @@ response = get_completion(prompt)
 from IPython.display import display, Markdown, Latex, HTML, JSON display(HTML(response))
 ```
 
-![](img/2023-09-28-21-10-43.webp)
+![](../img/2d252aee-3e2d-46f5-82a3-28470cf6b2c8.webp)
 
 ## Spellcheck / Grammar Check
 
@@ -208,7 +208,7 @@ diff = Redlines(text,response)
 display(Markdown(diff.output_markdown))
 ```
 
-![](img/2023-09-28-21-13-29.webp)
+![](../img/787256fb-7abc-408f-a13c-e91eb94dded2.webp)
 
 ## Expanding
 
@@ -220,7 +220,7 @@ display(Markdown(diff.output_markdown))
 
 Temperature - degree of randomness.
 
-![](img/2023-09-28-21-37-59.webp)
+![](../img/7e76c5a5-1a41-4cec-9bb7-c99bec1f600b.webp)
 
 When you want a predictable response, use  temperature 0.
 If you want to use model in the creative way, use higher temperature.
@@ -236,7 +236,7 @@ messages = [
     {'role':'user', 'content':'I don\'t know'}
 ]
 ```
-![](img/2023-09-28-21-46-45.webp)
+![](../img/0aae04cb-041b-4bc7-9bc1-9b9ed41cf4f4.webp)
 
 
 ## Order bot

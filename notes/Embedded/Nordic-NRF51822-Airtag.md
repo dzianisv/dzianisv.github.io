@@ -10,7 +10,7 @@ I did a first prototype of OpenHaystakTracker using [micro:bit](https://tech.mic
 ## First prototypes
 
 
-![](images/2023-06-08-12-55-08.webp)
+![](../img/f58f6900-4a34-4415-94f5-cf67918dee12.webp)
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ I did a first prototype of OpenHaystakTracker using [micro:bit](https://tech.mic
 |Speed|16MHz
 |Debug|SWD, jlink/OB
 
-![](images/microbit-airtag.webp)
+![](../img/e8f7c1fd-3704-43d1-b46c-73053b6f64b2.webp)
 
 
 ## ESP32 vs nRF51822 Power Conumption
@@ -32,12 +32,12 @@ OpenHaystack beacon works more time on micro:bit dev board (nRF51822) in compari
 
 But micro:bit dev board is not small, so I continued to look for the better fit.
 And I [found](https://github.com/seemoo-lab/openhaystack/discussions/188)
-![](images/2023-06-08-12-51-15.webp)
+![](../img/6de12b5d-e0cc-4855-9445-38f85b6a318c.webp)
 this beacon module based on nRF51822 on [~10$ Aliexpress](https://aliexpress.ru/item/1005003671695188.html)
 
 ![](images/2023-06-08-12-22-38.webp).
 
-![](images/2023-06-08-12-50-26.webp)
+![](../img/52b20513-449c-49ae-a6d2-552ef73c52dd.webp)
 Without a case just MCU costs about[1.41$ Aliexpress](https://aliexpress.ru/item/1005003470970655.html). But to flash it  you need SWD interface, like STLink V2 [1.5$ Aliexpress](https://aliexpress.ru/item/32260100115.html) using this [script](https://github.com/ddavidebor/nRF51822-OSX-ST_LINK_V2-Flasher-Script)
 
 Here is STLink v2 -> nRF51822 pinout [Reference](https://habr.com/ru/articles/439148/)
@@ -60,18 +60,18 @@ openocd -f interface/stlink.cfg -f target/nrf51.cfg -c init -c "reset halt" ^
 
 Ok, I ordered nrf51822 to build a second prototype on bare-metal MCU. It looks like this
 
-![Board Connected 2](images/nrf51822-front.webp)
-![Board Connected 1](images/nrf51822-back.webp)
+![Board Connected 2](../img/d100fc09-de93-44e5-adb3-c831c53f8e8f.webp)
+![Board Connected 1](../img/8efbc0f9-e1f0-4ab5-bde8-4fca919087ea.webp)
 
 I found the following pinout for my board to connect to STLink v2, you need the following pins  SWDIO, SWDCLK, VDD, GND
-![](images/2023-07-09-08-34-46.webp)
+![](../img/2dc4f10e-6bb0-4d2d-b315-6bbd9a332fde.webp)
 
 ## Flashing
 
 I found a few instruction on how to flash nrf51822 using openocd. The most relevant was at this [thread](https://github.com/seemoo-lab/openhaystack/issues/35#issuecomment-828338751
 ). To flash an openhaystack firmware, you need to create a new devices in the app and the export `Advertisement key` as base64 string.
 
-![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-09-24.webp)
+![](../img/a074fd6a-00fa-461a-8e8a-208a50b5fdc1.webp)
 
 Then `export PUBKEY=<advertisement key>` and patch an firmware image with a new key. To patch the firmware I have used `key-injector.py` script.
 
@@ -99,7 +99,7 @@ firmware=opnehaystack-nrf51822-firmware.bin
 openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg -c "init; halt; nrf51 mass_erase; program $firmware verify; program $firmware; resume;"
 ```
 
-After flashing connect a battery and mark the the "device" in openhaystack as "Deployed". ![](Nordic-NRF51822-Airtag.md-images/2023-07-09-12-10-03.webp)
+After flashing connect a battery and mark the the "device" in openhaystack as "Deployed". ![](../img/1d0ec570-038a-41ec-9e80-2d42fae7ae5c.webp)
 
 Enjoy!
 

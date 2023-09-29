@@ -73,7 +73,7 @@ Allows to easily discover, assess and invest in liquidity pools across chains.
 
 ## [AAVE](https://docs.aave.com/hub/)
 Liqudity-poll for lending or borrowing.
-![](farming.md-images/2023-07-08-18-08-50.webp)
+![](../img/32070a63-5663-4bed-b490-bdc6afc2dffb.webp)
 Chains: Arbitrum, Avalanche, Fantom, Harmony, Optimism, Polygon, Metis
 
 Example APY on 2023-07-08

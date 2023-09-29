@@ -63,13 +63,13 @@ Found DFU: [1209:db42] ver=0111, devnum=28, cfg=1, intf=0, path="20-2", alt=0, n
 
 There is a webusb api that allows to flash MCU using Browser and JS API. Here is a [demo web app](https://devanlai.github.io/webdfu/dfu-util/)
 
-![](img/2023-08-09-23-51-04.webp)
+![](../img/9ff256cd-f500-4ea4-8222-fe786b55b0b2.webp)
 
 ## Create plarform.io project
 
 I created a simple timer project using Platform.io Arduino-compatible abstractions for STM32F103 and configured to upload a firmware over [DFU](https://docs.platformio.org/en/latest/boards/ststm32/maple_mini_b20.html) bootloader in `platform.ini`
 
-![](img/2023-08-10-00-02-01.webp)
+![](../img/fdfcd647-8d95-4f46-91ab-a0b665f56c9a.webp)
 
 
 ```

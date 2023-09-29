@@ -17,7 +17,7 @@ parameters:
 
 but that requires a Pod restart with a new EMPTY Volume attached, that causes a significant downtime. But then I discovered that I can change volume type, througput and ioops in the AWS Console
 
-![](EKS-VolumeModification.md-images/2023-06-06-21-13-22.webp)
+![](../img/6c424b18-23d0-41d4-b956-0db66fc02561.webp)
 
 To locate Volume, you need a "volumeHandle", that can be listed by the following script:
 

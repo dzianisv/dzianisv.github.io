@@ -8,20 +8,20 @@ After scouring the internet, I stumbled upon a solution: a WiFi router with a PC
 
 ### The Router: [UniElec U7628-01](https://aliexpress.ru/item/32816981605.html?spm=a2g2w.orderdetail.0.0.41334aa6mFtUZ1&sku_id=64789943590) - $40
 
-![UniElec U7628-01](Unielec-U7628/img2.webp)
+![UniElec U7628-01](../img/48025c73-82f1-4163-b1e8-5cbe05a80a89.webp)
 
 This quirky router, reminiscent of building blocks, boasts a 580MHz MediaTek MT7628AN processor, 64MB DDR2 RAM, and 16MB flash storage. With 4 LAN ports, dual-band WiFi, and a USB 2.0 port, it's a steal. The cherry on top? The PCI-E slot for the 3G/4G modem.
 
 ### The Modem: [LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057) - $18
 
-![](img/2023-09-14-00-45-21.webp)
+![](../img/d2522b1a-0b8c-47e7-a290-27291786572c.webp)
 
 ## Setting Things Up
 
 Inserting the modem was a breeze. Just pop it into the PCI-E slot and secure it. The router came with a custom OpenWrt 17 build, but I wanted the latest and greatest.
 
-![Alt text](Unielec-U7628/img4.webp)
-![Alt text](Unielec-U7628/img3.webp)
+![Alt text](../img/f9fa7e02-f299-42c8-9132-234ac3020672.webp)
+![Alt text](../img/001ccfb1-8603-4f5d-b87b-998f5bd33be1.webp)
 
 Flashing it with OpenWRT was slightly tricky, but [this guide](https://openwrt.org/toh/unielec/u7628-01) was a lifesaver.
 
@@ -41,8 +41,8 @@ opkg install luci luci-proto-wireguard luci-app-wireguard wireguard-tools kmod-u
 
 Once set up, I configured the APN settings for my carrier and set a WiFi password for my new "home" network
 
-![](img/2023-09-14-09-57-15.webp)
-![](img/2023-09-14-09-58-02.webp)
+![](../img/d5cb866e-86fd-46df-859c-54c45c74aaad.webp)
+![](../img/0f7cc48a-7cab-443f-8961-78c592922c40.webp)
 
 After reloading network everything, I was excited to run some speed tests - I was now getting 20Mbps download and 5Mbps upload speeds for the same monthly cost as my old 5Mbps ADSL plan!
 

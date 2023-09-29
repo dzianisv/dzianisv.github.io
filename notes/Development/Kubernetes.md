@@ -1,6 +1,6 @@
 # Kubernetest Internals
 
-![](img/2023-09-19-14-33-52.webp)
+![](../img/cae75064-ade7-4c3a-945b-0d6fed6a121e.webp)
 
 Kubernetes follows the declarative model, what that means is as the user you provide K8s what are you need in the cluster and K8s does all the heavy lifting to maintain the desired state provided by the user. Those declarative commands user provides are referred to as manifest, often a YAML file with predefined keys and values.
 

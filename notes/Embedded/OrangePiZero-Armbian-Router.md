@@ -1,5 +1,5 @@
 # Short Guide: Wireguard-enabled router on OrangePI Zero
-![](./OrangePiZeroRouter.webp)
+![](../img/43de5eba-24e4-4391-abda-a12122996cd5.webp)
 Here I am going to explain how to build a Wireguard-enabled Wi-Fi hotspot from OrangePi Zero. Why do you need it? It is nice to have a VPN router when you travel. You can use a ready solutions, but mine router burned out when I tried to connect my Pixel6 as a USB upstream to share LTE data.
 
 I am tried to build it using OpenWrt, but OpenWrt on this board doesn't support Wi-Fi.
