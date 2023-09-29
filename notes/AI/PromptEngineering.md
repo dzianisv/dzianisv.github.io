@@ -11,6 +11,25 @@ The nice thing that this course is interactive and you can play with ChatGPT on 
 
 ![](img/2023-09-17-23-23-11.webp)
 
+
+```python
+import openai
+import os
+
+from dotenv import load_dotenv, find_dotenv
+_ = load_dotenv(find_dotenv()) # read local .env file
+openai.api_key  = os.getenv('OPENAI_API_KEY')
+
+def get_completion(prompt, model="gpt-3.5-turbo",temperature=0): # Andrew mentioned that the prompt/ completion paradigm is preferable for this class
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=temperature, # this is the degree of randomness of the model's output
+    )
+    return response.choices[0].message["content"]
+```
+
 # Principles
 ## Princeple 1: Write clear and specific instructions
 
@@ -160,7 +179,7 @@ Prompt examples
 
 
 
-```jupyter
+```python
 data_json = {"protocols": {"solana": {"version": "1.14.28", "network": "mainnet"}, "ethereum": {"version": "11", "network": "mainnet"}}}
 
 
@@ -180,7 +199,7 @@ from IPython.display import display, Markdown, Latex, HTML, JSON display(HTML(re
 
 > proofread and correct this review. Make it more compelling.  Ensure it follows APA style guide and targets an advanced reader.  Output in markdown format.
 
-```jupyter
+```python
 prompt = f"proofread and correct this review: ```{text}```"
 response = get_completion(prompt)
 from redlines import Redlines
@@ -190,3 +209,116 @@ display(Markdown(diff.output_markdown))
 ```
 
 ![](img/2023-09-28-21-13-29.webp)
+
+## Expanding
+
+## Customize the automated reply to a customer email
+
+> you are customer service AI assistant. Your task is to send an email reply to a valued customer. Given the customer email delimited by ```, generate a reply to thank the customer for their review. If the sentiment is positve or neutral, thank them for their review. If the sentimenet is negative, apologyize and suggest that they can reach out to customer serice. Make sure to use specific details from the review. Write a concise and professional tone. Sign the email as `AI customer agent`. Customer revifew ```{review}```, Review sentiment {sentiment}
+
+# Temperature
+
+Temperature - degree of randomness.
+
+![](img/2023-09-28-21-37-59.webp)
+
+When you want a predictable response, use  temperature 0.
+If you want to use model in the creative way, use higher temperature.
+
+
+# Chatbots
+
+```python
+messages = [
+    {'role': 'system', 'content': 'You are an assistant that speaks like Shakespere.'],
+    {'role': 'user', 'content': 'tell me a joke'},
+    'role':'assistant', 'content':'Why did the chicken cross the road'},
+    {'role':'user', 'content':'I don\'t know'}
+]
+```
+![](img/2023-09-28-21-46-45.webp)
+
+
+## Order bot
+
+```python
+def collect_messages(_):
+    prompt = inp.value_input
+    inp.value = ''
+    context.append({'role':'user', 'content':f"{prompt}"})
+    response = get_completion_from_messages(context)
+    context.append({'role':'assistant', 'content':f"{response}"})
+    panels.append(
+        pn.Row('User:', pn.pane.Markdown(prompt, width=600)))
+    panels.append(
+        pn.Row('Assistant:', pn.pane.Markdown(response, width=600, style={'background-color': '#F6F6F6'})))
+
+    return pn.Column(*panels)
+
+import panel as pn  # GUI
+pn.extension()
+
+panels = [] # collect display
+
+context = [ {'role':'system', 'content':"""
+You are OrderBot, an automated service to collect orders for a pizza restaurant. \
+You first greet the customer, then collects the order, \
+and then asks if it's a pickup or delivery. \
+You wait to collect the entire order, then summarize it and check for a final \
+time if the customer wants to add anything else. \
+If it's a delivery, you ask for an address. \
+Finally you collect the payment.\
+Make sure to clarify all options, extras and sizes to uniquely \
+identify the item from the menu.\
+You respond in a short, very conversational friendly style. \
+The menu includes \
+pepperoni pizza  12.95, 10.00, 7.00 \
+cheese pizza   10.95, 9.25, 6.50 \
+eggplant pizza   11.95, 9.75, 6.75 \
+fries 4.50, 3.50 \
+greek salad 7.25 \
+Toppings: \
+extra cheese 2.00, \
+mushrooms 1.50 \
+sausage 3.00 \
+canadian bacon 3.50 \
+AI sauce 1.50 \
+peppers 1.00 \
+Drinks: \
+coke 3.00, 2.00, 1.00 \
+sprite 3.00, 2.00, 1.00 \
+bottled water 5.00 \
+"""} ]  # accumulate messages
+
+
+inp = pn.widgets.TextInput(value="Hi", placeholder='Enter text here…')
+button_conversation = pn.widgets.Button(name="Chat!")
+
+interactive_conversation = pn.bind(collect_messages, button_conversation)
+
+dashboard = pn.Column(
+    inp,
+    pn.Row(button_conversation),
+    pn.panel(interactive_conversation, loading_indicator=True, height=300),
+)
+
+dashboard
+```
+
+Then we can ask to output an order json
+Use temperature about 0 to make otuput predictable
+```python
+messages.append(
+{'role':'system', 'content':'create a json summary of the previous food order. Itemize the price for each item\
+ The fields should be 1) pizza, include size 2) list of toppings 3) list of drinks, include size   4) list of sides include size  5)total price '},
+)
+
+response = get_completion_from_messages(messages, temperature=0)
+```
+
+# Sumary
+Principles
+- Write clear and specific instructions
+- Give the model time to "think"
+Capabilities: Summarizing, Inferring, Transforming, Expanding
+
