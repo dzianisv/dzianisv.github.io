@@ -109,3 +109,84 @@ How to reduce hallucinations:
 - Analyze where the result does not give what you want
 - Clarify instructions, give more time to think
 - Refine prompts with a batch of examples
+
+# Sumarizing
+
+>Your task is to generate a short sumary of a product \ review from an ecomerce site. Sumarize the review below, delimited by <<< >>>, in at most 30 worlds.
+
+or
+
+> Your task is to extract relevant information from a product review from an ecommerce site to give feedback to the Shipping department. From the review bellow delemited by <<< >>>
+
+
+# Inferring
+
+Prompt examples
+
+> What is the senteimet of the following product review, which is delimited with tripple backtriks. Review text ```{text}```
+
+> Identify a list of emotions that the writer of the following review is expressing. Include no more than five items in the list. Format your answer as a list of lower-case words separated by commas.
+
+> Is the writer of the following review expressing anger? The review is delimietd with triple backtricks. Give you answer as either yes or no.
+
+> Identiyf the following items from the review text:
+> - Items purchases by the reviwer
+> - Company that made the item
+> The reive is delimited with triple backtricks.
+
+> Determine five topics that are being discussed in the following text, which is delimited by triple backtricks. Make each item one or two words long. Format your response as a list of items separated by commas. Text sample ```{story}```
+
+## Make a news alert for certain topics
+> Determine whether each item in the followin list of topics is atopic in the text bellow, which is delmited with triple backtricks. Give you answer as list with 0 or 1 for each topic. List of topcs {topic_list}. Text sample ```{story}```
+
+# Transforming
+
+
+## Translation
+> Translate the following English text to Spanish: ```{text}```
+
+> Tell me which language this is: ```{text}```
+
+> Translate the following text to Spanish in both the formal and informal forms: ```{text}```
+
+## Tone transformation
+
+> Translate the following from slang to a business letter ```{text}```
+
+![](img/2023-09-28-21-02-18.png)
+
+
+## Format
+
+
+
+```jupyter
+data_json = {"protocols": {"solana": {"version": "1.14.28", "network": "mainnet"}, "ethereum": {"version": "11", "network": "mainnet"}}}
+
+
+prompt = f"""
+Translate the following python dictionary from JSON to an HTML \
+table with column headers and title: {data_json}
+"""
+response = get_completion(prompt)
+from IPython.display import display, Markdown, Latex, HTML, JSON display(HTML(response))
+```
+
+![](img/2023-09-28-21-10-43.png)
+
+## Spellcheck / Grammar Check
+
+> "Proofread and correct the following text and rewrite the corrected version. If you don't find and errors, just say "No errors found". Don't use  any punctuation around the text: ```{text}```
+
+> proofread and correct this review. Make it more compelling.  Ensure it follows APA style guide and targets an advanced reader.  Output in markdown format.
+
+```jupyter
+prompt = f"proofread and correct this review: ```{text}```"
+response = get_completion(prompt)
+from redlines import Redlines
+
+diff = Redlines(text,response)
+display(Markdown(diff.output_markdown))
+```
+
+![](img/2023-09-28-21-13-29.png)
