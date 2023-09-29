@@ -1,3 +1,5 @@
+# Armbian Mega Cloud Syncing server
+
 ```bash
 wget https://mega.nz/linux/repo/Raspbian_11/armhf/megacmd-Raspbian_11_armhf.deb && sudo apt install -yq "$PWD/megacmd-Raspbian_11_armhf.deb"
 ```

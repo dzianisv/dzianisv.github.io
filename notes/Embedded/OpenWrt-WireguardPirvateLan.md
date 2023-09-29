@@ -1,3 +1,4 @@
+# multi-SSID multi-VPN OpenWrt router setup
 👨🏻‍💻 How I turned my boring OpenWRT router into a cool multi-SSID WiFi router using Wireguard VPN?
 
 So, I had some free time and thought - why not make something cool out of this boring OpenWRT router? And here's how I did it 👇

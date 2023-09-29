@@ -1,1 +1,1 @@
-- [DavinchiResolveQuickNotes.md](DavinchiResolveQuickNotes.md)
+- [DavinchiResolveQuickNotes](DavinchiResolveQuickNotes.md)
