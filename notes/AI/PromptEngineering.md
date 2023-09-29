@@ -153,7 +153,7 @@ Prompt examples
 
 > Translate the following from slang to a business letter ```{text}```
 
-![](img/2023-09-28-21-02-18.png)
+![](img/2023-09-28-21-02-18.webp)
 
 
 ## Format
@@ -172,7 +172,7 @@ response = get_completion(prompt)
 from IPython.display import display, Markdown, Latex, HTML, JSON display(HTML(response))
 ```
 
-![](img/2023-09-28-21-10-43.png)
+![](img/2023-09-28-21-10-43.webp)
 
 ## Spellcheck / Grammar Check
 
@@ -189,4 +189,4 @@ diff = Redlines(text,response)
 display(Markdown(diff.output_markdown))
 ```
 
-![](img/2023-09-28-21-13-29.png)
+![](img/2023-09-28-21-13-29.webp)
