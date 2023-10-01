@@ -28,3 +28,9 @@ and install IoT agent on Armbian
 DD_API_KEY=<> DD_AGENT_FLAVOR='datadog-iot-agent'  DD_SITE="us5.datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script_agent7.sh)"
 systemctl enable --now datadog-agent
  ```
+
+
+## Files Synchronization from the localhost
+```shell
+alias rsync-chacha='rsync -r -t l --progress=status -e "ssh -o Ciphers=chacha20-poly1305@openssh.com"
+```
