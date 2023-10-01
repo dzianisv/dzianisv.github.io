@@ -47,6 +47,7 @@ curl "https://github.com/dzianisv/utils/blob/master/bin/linux-install-transfer-d
 This installs a `/usr/local/bin/transfer-dcim` bash script I created to
 1. Automount any attached storage (usbdisk, sdcard, camera in file transfer mode)
 2. Rsync files to the remote server. Remove servers has to be defined in the $HOME/.config/transfer-dcim-destinations.txt in the following format
+
 ```
 root@bananapi.local:/media/root/External5TB/Photo
 root@bananapi:/media/root/External5TB/Photo

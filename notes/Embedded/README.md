@@ -11,6 +11,7 @@
 - [OpenWRT Cheatsheet](OpenwrtCheatsheet.md)
 - [OrangePi4 LTS Photoprism](OrangePi4-LTS-Photoprism.md)
 - [Short Guide: Wireguard-enabled router on OrangePI Zero](OrangePiZero-Armbian-Router.md)
+- [OrangePiZeor Files Custodian](OrangePiZero-Files-Custodian.md)
 - [Short Guide: How to create a travel 3G/LTE/5G router on OrangePi Zero.](OrangePiZero-Openwrt-3g-Router.md)
 - [STM32 SystemBootloader](STM32-SystemBootloader.md)
 - [Windows10 Images](Windows10-Images.md)

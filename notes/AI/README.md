@@ -1,6 +1,6 @@
 - [LangChain](LangChain.md)
 - [Text To Speech](OpenSourceProjects.md)
-- [Principles](PromptEngineering.md)
+- [LLM Prompt Engineering](PromptEngineering.md)
 - [TTS Research](TTS-Research.md)
 - [Video editors with AI features](VideoEditing.md)
 - [news](news.md)

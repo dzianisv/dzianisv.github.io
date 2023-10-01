@@ -339,9 +339,9 @@ about their customers and products!!
 """
 ```
 
-![](img/2023-09-29-14-59-28.png)
-![](img/2023-09-29-15-00-22.png)
-![](img/2023-09-29-15-00-36.png)
-![](img/2023-09-29-15-01-01.png)
-![](img/2023-09-29-15-01-39.png)
-![](img/2023-09-29-15-02-33.png)
+![](../img/d6c6c2d9-d4ba-47ae-89dc-05f8f3103d04.webp)
+![](../img/6c290994-b68f-42ea-9ef6-9a8ca8af7e6a.webp)
+![](../img/a19b12bc-974f-4a04-8f04-e89e2232c7c2.webp)
+![](../img/75210f99-0e4a-409c-9545-26c488457792.webp)
+![](../img/4c3acb19-56d1-49b1-bff5-c102cb45fde5.webp)
+![](../img/c63bc3cc-e56e-4f68-8dd8-623f8a6577f9.webp)
