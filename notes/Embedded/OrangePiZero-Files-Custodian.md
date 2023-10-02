@@ -59,6 +59,15 @@ If the OrangePI is able to connect using this name, it will be connected directl
 Otherwise, a tailscale-defined hostname `banaanpi` is used. Tailscale encryption + rsync over ssh encryption load CPU twice, so it will transfer files slower. But in this case it will be transfered from any point on the world where you can conect orangepizero to the Internet.
 3. Delete files from the attached storage when backup is done
 
+## Authorize OrangePiZero to connect to the backup server
+
+You need to put generate ssh keys and add this key to the remote backup server in order to authorize OrangePiZero to rsync files to it. In my case root@bananapi.local is the hostname
+
+
+```shell
+ssh-keygen -t ed25519
+ssh-copy-id root@bananapi.local
+```
 
 ## Fun
 

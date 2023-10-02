@@ -89,6 +89,8 @@ output_string = re.sub(b"OFFLINEFINDINGPUBLICKEYHERE!", decoded_bytes, data)
 sys.stdout.buffer.write(output_string)
 ```
 
+Install open-ocd. For macOS you can use `brew install open-ocd` and then flash a firmware.
+
 
 ```bash
 export PUBKEY=4jSeYlz7GAhKYQBjXS1Ku06A5+UjV2CfvEATNw==
@@ -103,6 +105,11 @@ After flashing connect a battery and mark the the "device" in openhaystack as "D
 
 Enjoy!
 
+## Setup openhaystack software
+```shell
+sudo spctl --master-disable
+sudo defaults write "/Library/Preferences/com.apple.mail" EnableBundles 1
+```
 ## Reference
 
 [](https://adamcatley.com/AirTag.html#power-traces)
