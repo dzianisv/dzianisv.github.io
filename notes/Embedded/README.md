@@ -8,6 +8,7 @@
 - [Setting Up OpenWRT Configuration Backup to GitLab](OpenWrt-GitServiceDiscovery.md)
 - [multi-SSID multi-VPN OpenWrt router setup](OpenWrt-WireguardPirvateLan.md)
 - [OpenWrtDualWiFi](OpenWrtDualWiFi.md)
+- [OpenhayBike](Openhaybike.md)
 - [OpenWRT Cheatsheet](OpenwrtCheatsheet.md)
 - [OrangePi4 LTS Photoprism](OrangePi4-LTS-Photoprism.md)
 - [Short Guide: Wireguard-enabled router on OrangePI Zero](OrangePiZero-Armbian-Router.md)
