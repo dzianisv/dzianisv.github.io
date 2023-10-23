@@ -33,6 +33,8 @@ In this refined version of your blog post, I've corrected some spelling and gram
 
 I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now
 
+![](img/9ba7bacb-6c07-4643-a91c-066560db5d4d.webp)
+
 - I can upload my files to the closest replica from my laptop;
 - I can easilly add more replicas to my setup;
 - I don't neet to use tailscale anymore, but I kept it just in case I need to do remote login over ssh.
