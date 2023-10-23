@@ -2,7 +2,7 @@
 
 Traveling tends to ignite my passion for capturing moments, resulting in a plethora of photos and videos. However, the digital hoard demands substantial disk space, rendering cloud storage impractical due to the high costs associated with terabytes of data. To tackle this, I invested in portable hard disk drives (HDDs) and established a Network Attached Storage (NAS) system using single-board PCs. I carry one of these setups during my travels for immediate access to my media files, while the other acts as a home-based replica.
 
-![](../img/8268392f-5eb2-4a1c-87fd-7f4e7f3a7e76.webp)
+![](../img/ReplicatedNAS.webp)
 
 Initially, I utilized Resilio Sync for my synchronization needs. However, I soon discovered its incompatibility with MIPS architecture, which was crucial as some of the travel routers I use are powered by MIPS CPUs. The ability to maintain a backup during travels using a travel router with USB connectivity proved to be immensely convenient.
 
