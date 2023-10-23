@@ -15,7 +15,7 @@ For the remote replica stationed at home, I opted for a BananaPi. A notable adva
 
 Initially, I experimented with Syncthing for synchronization, but the GoLang-based Syncthing required a memory capacity that exceeded what the OrangePiZero (with its 256MB of memory) could provide. Consequently, I reverted to the tried-and-tested rsync.
 
-I scripted a setup through [configure-autorsync.sh](https://github.com/dzianisv/utils/blob/bin/linux-configure-autosync.sh), which facilitates the installation of a system service to replicate files from the OrangePiZero to the BananaPi. To establish a network among the OrangePiZero, BananaPi, and my laptop, I utilized [tailscale](https://tailscale.org).
+I scripted a setup through [configure-autorsync.sh](https://github.com/dzianisv/utils/blob/bin/linux-configure-autosync.sh), which facilitates the installation of a system service to replicate files from the OrangePiZero to the BananaPi. `autorsync` script also sends [Telegram](https://telegram.org) notifications when it starts and finishes. To establish a network among the OrangePiZero, BananaPi, and my laptop, I utilized [tailscale](https://tailscale.org).
 
 On the OrangePiZero, I also operate a WebDav server for easy file access..
 
