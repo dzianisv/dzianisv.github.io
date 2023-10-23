@@ -25,3 +25,5 @@ On my laptop, the [transfer-dcim](https://github.com/dzianisv/utils/blob/bin/tra
 I also explored running PhotoPrism on the BananaPi to better organize my media files, enriching my media management system.
 
 In this refined version of your blog post, I've corrected some spelling and grammatical errors, improved coherence, and enhanced the flow of information. This should provide a smoother reading experience for your audience while retaining the technical details of your travel autosync setup.
+
+Overall in case I need more replicas, I would use syncthing to save bandwidth, but for current almost one-peer-to-peer setup rsync perfoms better and requires less reousrces.

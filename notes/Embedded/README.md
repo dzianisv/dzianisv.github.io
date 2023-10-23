@@ -1,3 +1,4 @@
+- [Replicated Set of Network Attached Sources](./Autorsync.md)
 - [How to unlock Android bootloader on Pixel](AndroidUnlock.md)
 - [Travel Autorsync](Autorsync.md)
 - [Armbian Mega Cloud Syncing server](BananaPi-Cloud-Sync.md)
