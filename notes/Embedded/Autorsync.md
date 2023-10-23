@@ -1,5 +1,8 @@
 # Travel Autorsync
 
+
+# Iteration 1
+
 Traveling tends to ignite my passion for capturing moments, resulting in a plethora of photos and videos. However, the digital hoard demands substantial disk space, rendering cloud storage impractical due to the high costs associated with terabytes of data. To tackle this, I invested in portable hard disk drives (HDDs) and established a Network Attached Storage (NAS) system using single-board PCs. I carry one of these setups during my travels for immediate access to my media files, while the other acts as a home-based replica.
 
 ![](../img/ReplicatedNAS.webp)
@@ -13,7 +16,7 @@ To host the local replica, I employed a minimalistic OrangePiZero running Armbia
 
 For the remote replica stationed at home, I opted for a BananaPi. A notable advantage of the BananaPi is its capability to support not only USB disks but also direct SATA disk connections.
 
-Initially, I experimented with Syncthing for synchronization, but the GoLang-based Syncthing required a memory capacity that exceeded what the OrangePiZero (with its 256MB of memory) could provide. Consequently, I reverted to the tried-and-tested rsync.
+Initially, I experimented with Resilio Sync (a.k.a Bittorrent Sync) for synchronization, but it required a memory capacity that exceeded what the OrangePiZero (with its 256MB of memory) could provide, also it didn't work well on MIPS routers and I have issues running it on OpenWRT ARMv7 router. Consequently, I reverted to the tried-and-tested rsync.
 
 I scripted a setup through [configure-autorsync.sh](https://github.com/dzianisv/utils/blob/bin/linux-configure-autosync.sh), which facilitates the installation of a system service to replicate files from the OrangePiZero to the BananaPi. `autorsync` script also sends [Telegram](https://telegram.org) notifications when it starts and finishes. To establish a network among the OrangePiZero, BananaPi, and my laptop, I utilized [tailscale](https://tailscale.org).
 
@@ -26,4 +29,6 @@ I also explored running PhotoPrism on the BananaPi to better organize my media f
 
 In this refined version of your blog post, I've corrected some spelling and grammatical errors, improved coherence, and enhanced the flow of information. This should provide a smoother reading experience for your audience while retaining the technical details of your travel autosync setup.
 
-Overall in case I need more replicas, I would use syncthing to save bandwidth, but for current almost one-peer-to-peer setup rsync perfoms better and requires less reousrces.
+## Iteration 2
+
+I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now I can upload my files to the closest replica from my laptop. Also, I can easilly add more replicas to my setup.
