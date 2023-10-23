@@ -27,8 +27,6 @@ On my laptop, the [transfer-dcim](https://github.com/dzianisv/utils/blob/bin/tra
 
 I also explored running PhotoPrism on the BananaPi to better organize my media files, enriching my media management system.
 
-In this refined version of your blog post, I've corrected some spelling and grammatical errors, improved coherence, and enhanced the flow of information. This should provide a smoother reading experience for your audience while retaining the technical details of your travel autosync setup.
-
 ## Iteration 2
 
 I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now
