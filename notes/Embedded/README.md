@@ -1,4 +1,5 @@
 - [How to unlock Android bootloader on Pixel](AndroidUnlock.md)
+- [Travel Autorsync](Autorsync.md)
 - [Armbian Mega Cloud Syncing server](BananaPi-Cloud-Sync.md)
 - [How I built ESP32 Airtag tracker](ESP32-Baremetal-Airtag.md)
 - [Bare metal ESP32 flashing](ESP32-Flashing.md)
