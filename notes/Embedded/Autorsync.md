@@ -31,4 +31,9 @@ In this refined version of your blog post, I've corrected some spelling and gram
 
 ## Iteration 2
 
-I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now I can upload my files to the closest replica from my laptop. Also, I can easilly add more replicas to my setup.
+I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now
+
+- I can upload my files to the closest replica from my laptop;
+- I can easilly add more replicas to my setup;
+- I don't neet to use tailscale anymore, but I kept it just in case I need to do remote login over ssh.
+- Using syncthing over rsync-ssh improves security, I don't need to add ssh-keys of NAS replica to all the devices I use.
