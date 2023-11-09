@@ -31,7 +31,7 @@ I also explored running PhotoPrism on the BananaPi to better organize my media f
 
 I setup [syncthing](https://syncthing.net/) on both single-board PC to enable 2-way synchronization. Now
 
-![](img/9ba7bacb-6c07-4643-a91c-066560db5d4d.webp)
+![](../img/9cdcfb59-359b-4127-880b-47b9235f8103.webp)
 
 - I can upload my files to the closest replica from my laptop;
 - I can easilly add more replicas to my setup;
