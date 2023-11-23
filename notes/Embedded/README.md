@@ -2,6 +2,7 @@
 - [ESP32-Baremetal-Airtag.md](ESP32-Baremetal-Airtag.md)
 - [ESP32-Flashing.md](ESP32-Flashing.md)
 - [ESP32-peripherals.md](ESP32-peripherals.md)
+- [GoogleWiFi-Upgrade.md](GoogleWiFi-Upgrade.md)
 - [Nordic-NRF51822-Airtag.md](Nordic-NRF51822-Airtag.md)
 - [OpenWrt-GitServiceDiscovery.md](OpenWrt-GitServiceDiscovery.md)
 - [OpenWrt-WireguardPirvateLan.md](OpenWrt-WireguardPirvateLan.md)
