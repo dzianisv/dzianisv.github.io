@@ -1,3 +1,4 @@
+- [Google Wifi: OpenWrt + Wireguard + USB Modem setup](./Blogposts/GoogleWifi-upgrade.md)
 - [AndroidUnlock.md](AndroidUnlock.md)
 - [ESP32-Baremetal-Airtag.md](ESP32-Baremetal-Airtag.md)
 - [ESP32-Flashing.md](ESP32-Flashing.md)
