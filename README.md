@@ -11,6 +11,10 @@ Hello, I am a Software Engineer with a passion for Networking and Decentralized 
 
 # My Open Source Software Projects
 
+## [Openhaystack Web](https://github.com/dzianisv/openhaystack-web)
+
+I created this project because [Openhaystack](https://github.com/seemoo-lab/openhaystack) app stopped to work on a new MacOS 14, but I needed a way to see locations of my openhaystack tracker. I built BLE beacon trackers using Nordic nrf5281 microcontrollers and ultilized openhaystack-discovered way to get a location of the tracker using [Apple Find My](https://www.apple.com/icloud/find-my/). Check out [openhaystack-toolkit](https://github.com/dzianisv/openhaystack-toolkit) for the tools that helps to flash a firmware to the tracker and generate crypto keypairs.
+
 ## [Plato Voice Assistant](https://github.com/dzianisv/AssistantPlato)
 
 AssistantPlato is an open-source project aimed at providing a comprehensive and user-friendly AI personal assistant experience. By leveraging cutting-edge Natural Language Processing (NLP) techniques, machine learning algorithms, and various APIs, it streamlines daily tasks, manages schedules, answers queries, and provides personalized recommendations. With its user-friendly interface and rich feature set, AssistantPlato is designed to cater to a wide spectrum of users - from individuals to businesses, and can be integrated seamlessly into various platforms.
@@ -21,6 +25,10 @@ LXDbox is an LXD containers management tool. It provides a more efficient altern
 
 ## [Photos for Documents](https://github.com/dzianisv/Photo4Documents)
 Needed a new passport photo so I created an ML app this weekend that removes backgrounds, aligns faces, and crops to passport size. It utilizes face_recognition dlib-powered library for facial detection and carvekit with tracer_7b pretrained model for background removal. Now I have unlimited great passport photos without going to a photo center! Machine learning is amazing for automating repetitive tasks. Especially I liked face_recognition lib, because it allows align faces from bad photos. I tested it on my photos and on photos from Kaggle dataset. Check out my GitHub for the code and demos!
+
+## [ERC4626 AssetManager](https://github.com/dzianisv/DeFiStrategyManager)
+This is Solidity smart-contract that could be deployed to any EVM-enabled chains (Ethereum, Optimism, Avalanche-C, BNB, Arbitrum, Polygon) for ERC4626 LiquidityPool Vault automated portfolio management.
+`reinvest()` allows to choose best top-perfoming Vaults and reinvest to it.
 
 
 ## [vpngate-client](https://github.com/dzianisv/vpngate-client)

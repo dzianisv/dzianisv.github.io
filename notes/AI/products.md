@@ -4,26 +4,26 @@ ChatGPT is a large language model created by OpenAI that uses the GPT-3 architec
 
 GPT-3.5-Turbo is not a commonly used term in the context of AI or natural language processing. It's possible that it is a specific variant or modification of the GPT-3 architecture, but without more information it's difficult to say for certain. GPT-3 itself is a powerful language model that has been trained on a massive dataset of text, making it capable of generating high-quality responses to a wide range of prompts.
 
-![](2023-05-21-15-06-30.webp)
+![](../img/f40026c8-d1f1-4134-9a27-f8c24221252e.webp)
 
 ## [Poe](http://poe.com)
-![](2023-05-21-15-08-59.webp)
+![](../img/d754b8d2-1721-47ac-b78e-440f64b80b07.webp)
 
 LLM agregator. You can access different LLM models, including ChatGPT, GPT4, Claude, Dragonfly, Sage.
 
 
 I didn't spend much time exploring Claude on poe.com, but I noticed that GPT3.5 is better. And this comparison table says the same
 
-![](2023-05-27-13-30-40.webp)
+![](../img/5c003408-54f8-433b-b9be-d651f9a31ed9.webp)
 
 ## [Vercel Playground](https://play.vercel.ai/)
-![](images/2023-06-04-19-45-33.webp)
+![](../img/e3498b36-747b-405e-9f74-9347eae86141.webp)
 
 A nice tool to see how different LLM asnsers to different questions.
 
 ## [Phind](https://phind.com)
-![](images/2023-06-04-19-47-10.webp)
-![](images/2023-06-04-19-47-53.webp)
+![](../img/77cbee1c-80b5-4306-8658-7bb76a91478c.webp)
+![](../img/efb2ed7e-7ecb-4aff-a346-bc0003dc7f24.webp)
 ## [Forefront](http://forefront.ai)
 
 
@@ -43,22 +43,22 @@ Support Alpaca, Vicuna, GPT4All models
 # Marketing
 
 ## [Flair.ai](flair.ai)
-![](2023-05-20-17-02-55.webp)
+![](../img/9c861c4f-5deb-468c-80ef-bad560ff374e.webp)
 Tool to create marketing photos of the good
 ## [Oxolo](oxolo.com)
 Generates video marketing videos.
 Input: link to the item, photo of the item
-![](2023-05-20-17-04-32.webp)
-![](2023-05-20-17-17-29.webp)
-![](2023-05-20-17-19-17.webp)
-![](2023-05-20-17-19-33.webp)
+![](../img/7887e5ca-bbdc-4ede-a951-a3c75c3ec052.webp)
+![](../img/8383ba7d-edbf-494b-bcaf-ee746a0be750.webp)
+![](../img/7d1c3af6-7ead-47d8-90af-d7b8ebdbdb3c.webp)
+![](../img/058faf12-2fdc-4182-938b-bfe6f8b25a66.webp)
 
 ## [D-ID](https://www.d-id.com/)
 Generates talking person video by photo and text script
-![](2023-05-20-17-36-07.webp)
-![](2023-05-20-17-36-28.webp)
-![](2023-05-20-17-37-13.webp)
-![](2023-05-20-17-54-17.webp)
+![](../img/c2b738bd-c221-42ef-957c-d2993cd6f0cf.webp)
+![](../img/25382274-ca8e-41d5-b33c-08d690f27e95.webp)
+![](../img/414717f1-f0b7-4e6c-afff-2bf7e50e8a67.webp)
+![](../img/bd7377fa-94c7-435c-8744-66de192d4b80.webp)
 
 #  Generic Image Generation
 # [Midjourney](https://www.midjourney.com/)
@@ -70,36 +70,36 @@ It is available over [Discord](https://discord.com/invite/midjourney) interface.
 ## [Dallee 2](https://openai.com/product/dall-e-2)
 DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
 
-![](2023-05-21-14-42-38.webp)
+![](../img/d55128f6-4a5e-4f1a-84cc-1d6999f69f18.webp)
 
-Examples of generated images of "panda on surfboard"
-![DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 22.59.17 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.00.25 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.05.47 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp](DALL·E 2023-05-08 23.07.54 - crypto panda in ocean on surfboard painting.webp)
-![DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp](DALL·E 2023-05-08 23.09.51 - panda in ocean on boat doing cryptotrading.webp)
-![DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.12.17 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
-![DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp](DALL·E 2023-05-08 23.13.57 - panda from wallstreet on the boat in pacific ocean playing poker.webp)
+
+# [Bing Image Creator](https://www.bin.com/images/create)
+
+Under the hood it uses Dallee 2.
+
+![](../img/76c4434a-059a-486a-aba4-519078ff8a70.webp)
+![](../img/992a7325-030e-4e49-bd05-6c6300205595.webp)
+
 
 ## [Playground AI](https://playgroundai.com/login?redirect=/create?)
 The quality of images close to midjourney, pictures are beautiful.
 
-![](2023-05-21-14-52-03.webp)
-![](2023-05-21-14-55-54.webp)
-![](2023-05-21-14-56-17.webp)
+![](../img/f3ef5c01-ea9a-466f-990c-45e4d7437da2.webp)
+![](../img/2750b328-58d8-4797-8632-97f2816bd2ec.webp)
+![](../img/fec3658c-aa34-4134-a5e6-cd6af37b1c1a.webp)
 
 ## [Nightcaffe](https://nightcafe.studio/)
 
-![](2023-05-21-14-53-06.webp)
+![](../img/49e6b3c8-4990-4daf-8483-87f79bf82f70.webp)
 
 ## [StableDiffusion](stablediffusionweb.com)
 
-![](2023-05-21-14-53-38.webp)
+![](../img/f7612eb4-159e-48f4-a0c8-a2785868e411.webp)
 
 
 ## [QR code](https://huggingface.co/spaces/huggingface-projects/QR-code-AI-art-generator)
-![](products.md-images/2023-06-26-13-44-58.webp)
-![](products.md-images/2023-06-26-13-46-15.webp)
+![](../img/cf335a50-f4b7-4180-9667-89e1589a25c2.webp)
+![](../img/8671ed4e-1b77-4678-9028-7a53eff48d4c.webp)
 # Productivity
 
 # [Fireflies](https://chrome.google.com/webstore/detail/fireflies-summarize-meeti/meimoidfecamngeoanhnpdjjdcefoldn)
@@ -124,7 +124,7 @@ Meeting recordings, transcripts, search
 
 ## [SciSpace Copilot](https://chrome.google.com/webstore/detail/scispace-copilot/cipccbpjpemcnijhjcdjmkjhmhniiick)
 
-![](2023-05-23-13-24-40.webp)
+![](../img/64b31c07-9d63-4290-991a-3c77fa2c4769.webp)
 
 Highlight any text, number or chat and SciSpace Copilot will give you a simple explanation of what it means.
 
@@ -135,18 +135,18 @@ Highlight any text, number or chat and SciSpace Copilot will give you a simple e
 - Get tranaslations and grammar checks
 
 ## [Neeva](https://neeva.com/)
-![](2023-05-23-13-32-55.webp)
+![](../img/3b88471f-57f1-48e5-9ed2-6c74304dcb61.webp)
 
 ## [Finchat](https://finchat.io/)
-![](2023-05-23-13-35-43.webp)
+![](../img/82cd48ce-453c-43d1-9d77-118e442a3649.webp)
 generates answers to questions about public companies and investors. To generate accurate answers, FinChat provides reasoning, sources and data.
 
 
 # Software Development
 
 ## Github Copilot
-![](2023-05-24-18-57-57.webp)
-![](2023-05-24-18-58-34.webp)
+![](../img/e573a88c-3c9f-4621-bb5b-289fbc7c867a.webp)
+![](../img/5438bc25-587a-420d-b4d6-a6d72827b176.webp)
 ### GitHub Copilot
 **Strengths**. GitHub Copilot excels at generating code snippets and suggestions based on the context of the code being written, said Jorge Torres, co-founder & CEO of MindsDB, a platform designed for democratizing ML.
 
@@ -175,11 +175,11 @@ Jõgi also uses ChatGPT to generate function and unit tests to validate outcomes
 a low-code platform to build web apps you never had time for.
 
 ## [10Web](https://my.10web.io/)
-![](2023-05-23-13-50-36.webp)
-![](2023-05-23-13-53-07.webp)
-![](2023-05-23-13-53-58.webp)
-![](2023-05-23-13-54-17.webp)
-![](2023-05-23-13-54-47.webp)
-![](2023-05-23-13-55-09.webp)
-![](2023-05-23-13-57-00.webp)
+![](../img/d915aba1-258a-47be-baf6-e0591cb25b65.webp)
+![](../img/d6141855-a665-4756-99a1-6af7ec32b348.webp)
+![](../img/9d94e72d-b204-41d9-823b-47199597b2a2.webp)
+![](../img/f0a035fd-c299-4b2d-a23b-779e5e133286.webp)
+![](../img/bfc89110-dc3b-4549-b00c-ece308e44ae9.webp)
+![](../img/1f33cf83-97a6-405f-b1ae-af62abaaae33.webp)
+![](../img/ad2c911d-9d5b-4ada-952a-d9950d168765.webp)
 

@@ -20,6 +20,21 @@ The authorized withdrawer must be set when the vote account is created. It must 
 Commission can be set upon vote account creation with the --commission option. If it is not provided, it will default to 100%, which will result in all rewards deposited in the vote account, and none passed on to any delegated stake accounts.
 
 
+## Addresses
+
+Within the Solana protocol, there are several types of addresses and specialized roles, two of which you've mentioned: the vote address and the identity address.
+
+## Identity Address:
+This is the primary address of a validator in the Solana network.
+It identifies the validator on the network.
+The identity address holds the balance/stake that supports the validator's weight in the network.
+This address can be used to perform various operations, like staking, voting, and other instructions.
+### Vote Address:
+In the Solana consensus mechanism, the vote address is used by validators to submit their votes to the network. Voting is part of the PoH (Proof of History) and PoS (Proof of Stake) combined consensus mechanism that Solana uses.
+Each validator has an associated vote account. This vote account is separate from the identity address to maintain a separation of concerns – it exclusively handles the voting operations.
+Vote accounts track validator votes and rewards.
+The primary difference between the two is their function: the identity address identifies the validator and can hold the funds associated with it, while the vote address handles the voting process and tracks the voting history and rewards.
+
 ## Configuring CLI
 
 ```sh

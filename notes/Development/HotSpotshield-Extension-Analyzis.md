@@ -1,6 +1,6 @@
 ## Google Analytics Collect
 
-![](HotSpotshield-Extension-Analyzis.md-images/2023-07-19-15-43-21.webp)
+![](../img/fd8f8417-1a97-4075-b0f7-ac30ccf8622f.webp)
 
 ```
 fetch("https://www.google-analytics.com/collect", {
@@ -21,7 +21,7 @@ fetch("https://www.google-analytics.com/collect", {
 
 ## Google Analytics Bypass
 
-![](HotSpotshield-Extension-Analyzis.md-images/2023-07-19-15-44-48.webp)
+![](../img/b77ec5c4-f13d-401e-bc4f-ed5c36f767f5.webp)
 
 ## Internal analytics
 

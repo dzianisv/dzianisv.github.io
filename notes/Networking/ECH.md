@@ -1,10 +1,10 @@
 # Encrypted Client Hello (ECH)
 
-![Just TLS](2023-06-03-15-00-56.webp)
+![Just TLS](../img/4f571ffe-5f21-4659-80e6-9b4b05b6b99f.webp)
 
-![TLS + ESNI](2023-06-03-15-01-25.webp)
+![TLS + ESNI](../img/9e2ae4e1-9cd4-4e2f-a4bb-4689458ad9b1.webp)
 
-![TLS + ECH](2023-06-03-15-02-13.webp)
+![TLS + ECH](../img/aaa57cec-a46d-40d4-a982-3eaaa3827648.webp)
 
 
 To address the shortcomings of ESNI, recent versions of the [specification](https://datatracker.ietf.org/doc/draft-ietf-tls-esni/) no longer encrypt only the SNI extension and instead encrypt an entire Client Hello message (thus the name change from “ESNI” to “ECH”). Any extensions with privacy implications can now be relegated to an encrypted “ClientHelloInner”, which is itself advertised as an extension to an unencrypted “ClientHelloOuter”. Should a server support ECH and successfully decrypt, the “Inner” Client Hello is then used as the basis for the TLS connection. This is explained in more detail in Cloudflare’s excellent blog post on ECH. [Reference](https://blog.mozilla.org/security/2021/01/07/encrypted-client-hello-the-future-of-esni-in-firefox/)

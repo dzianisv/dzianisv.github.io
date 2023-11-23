@@ -1,4 +1,4 @@
-
+# How to unlock Android bootloader on Pixel
 ```sh
 adb reboot bootloader && while fastboot flashing unlock; do echo Retrying in 5s; sleep 5s; done;
 ```
@@ -23,8 +23,8 @@ fastboot flash boot boot.img
 
 ## Flash LineageOS
 ```sh
-adb sideload lineage-19.1-20230425-nightly-blueline-signed.zip 
+adb sideload lineage-19.1-20230425-nightly-blueline-signed.zip
 ```
 ```
-Total xfer: 1.00x 
+Total xfer: 1.00x
 ```

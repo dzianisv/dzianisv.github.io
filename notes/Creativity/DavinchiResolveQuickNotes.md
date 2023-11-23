@@ -2,4 +2,4 @@
 - In Edit tab click on the video
 - Enable inspector tool on the right top corner
 - Enable stabilization
-![](DavinchiResolveQuickNotes.md-images/2023-06-17-16-17-26.webp)
+![](../img/2984fe4c-fd18-4bd9-b89b-f08f4f22ef47.webp)

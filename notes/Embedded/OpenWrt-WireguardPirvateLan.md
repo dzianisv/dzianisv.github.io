@@ -1,8 +1,9 @@
+# multi-SSID multi-VPN OpenWrt router setup
 👨🏻‍💻 How I turned my boring OpenWRT router into a cool multi-SSID WiFi router using Wireguard VPN?
 
 So, I had some free time and thought - why not make something cool out of this boring OpenWRT router? And here's how I did it 👇
 
-![](OpenWrt-WireguardPirvateLan.md-images/2023-07-21-14-43-42.webp)
+![](../img/0d062ba8-b55f-4998-b935-bc70be824ce4.webp)
 
 ### 1️⃣ Configure a `privateLan` openwrt network
 
@@ -14,7 +15,7 @@ Don't worry about copying and pasting the script, I got you covered! Check out t
 
 Next up, I installed the packages `luci-proto-wireguard`, `luci-app-wireguard` and `wireguard-tools`. Then, went to Network->Interfaces->Add a new interface with the name `wg0` and protocol `Wireguard VPN`. After that, I loaded the configuration of the Wireguard VPN into the textarea, see the screenshots below.
 
-![Wireguard VPN Configuration](OpenWrt-WireguardPirvateLan.md-images/2023-07-15-15-23-57.webp)
+![Wireguard VPN Configuration](../img/cb405250-8d61-4e81-ac3d-d78a02035955.webp)
 
 ### 3️⃣ Add a gateway for the Wireguard interface
 
@@ -29,7 +30,7 @@ uci commit network
 
 Now, it was time to add some SSIDs! I added a new wireless access point with the details of the access point and chose Network `privateLan`.
 
-![Wireless Access Point Configuration](OpenWrt-WireguardPirvateLan.md-images/2023-07-15-15-27-04.webp)
+![Wireless Access Point Configuration](../img/b72158a7-02ab-4843-b909-66d6e244cbfa.webp)
 
 ### 5️⃣ Restart network
 

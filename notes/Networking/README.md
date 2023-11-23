@@ -1,2 +1,2 @@
-- [ECH.md](ECH.md)
-- [http2.md](http2.md)
+- [Encrypted Client Hello (ECH)](ECH.md)
+- [An in depth overview of HTTP/2](http2.md)
