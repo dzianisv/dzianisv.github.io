@@ -1,7 +1,6 @@
 - [Resources](001.1_EthereumSyncing.md)
 - [State Pruning](001.2_cosmos.md)
 - [Solana](001.3_Solana.md)
-- [001.3 SolanaPerfomance](001.3_SolanaPerfomance.md)
 - [Blockchains and DeFi research](001_Overview.md)
 - [002 DeepDive](002_DeepDive.md)
 - [Strategies](003.2_Beefy.md)
