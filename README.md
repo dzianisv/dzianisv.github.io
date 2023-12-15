@@ -11,6 +11,9 @@ Hello, I am a Software Engineer with a passion for Networking and Decentralized 
 
 # My Open Source Software Projects
 
+## [DeFiEquilibrium](https://github.com/dzianisv/DeFiEquilibrium)
+EVM automated Liqudity Pools assets manager. Smart Contract developed on Solidity, webapp is built using material style controls.
+
 ## [Openhaystack Web](https://github.com/dzianisv/openhaystack-web)
 
 I created this project because [Openhaystack](https://github.com/seemoo-lab/openhaystack) app stopped to work on a new MacOS 14, but I needed a way to see locations of my openhaystack tracker. I built BLE beacon trackers using Nordic nrf5281 microcontrollers and ultilized openhaystack-discovered way to get a location of the tracker using [Apple Find My](https://www.apple.com/icloud/find-my/). Check out [openhaystack-toolkit](https://github.com/dzianisv/openhaystack-toolkit) for the tools that helps to flash a firmware to the tracker and generate crypto keypairs.
