@@ -5,3 +5,4 @@
 - [Video editors with AI features](VideoEditing.md)
 - [news](news.md)
 - [GPT](products.md)
+- [How to build LLM-powered personal assistant bot](Build-LLM-poweredChatbots.md)
