@@ -5,7 +5,7 @@
 - [Blockchain DeepDive](002_DeepDive.md)
 - [Beefy Strategies](003.2_Beefy.md)
 - [Yeild Optimizers](003_Farming.md)
-- [Agregators](004_DEX.md)
+- [DEX Agregators](004_DEX.md)
 - [LayerZero](005_CrossChainCommunication.md)
 - [Bridging](005_DeFI.md)
 - [CEX overview](006_CEX.md)
