@@ -80,3 +80,28 @@ conversation = ConversationChain(
     verbose=True
 )
 ```
+
+
+## Google Palm and PDF Embeddings
+
+https://eightify.app/summary/computer-science-and-technology/free-google-palm-api-usage-step-by-step-guide
+
+```python
+from lahnchain.text_splitter import RecusiveCharacterTextSplitter
+from langchain.indexes import VectorstoreIndexCreator
+from langchain.document_loaders import UnstructuredPDFLoader
+from langchain.chains import RetrievalQA
+
+index= VectorstoreIndexCreator(
+    embeddings=GooglePalmEmbeddings(),
+    text_splitter=RecursiveCharecterTextSplitter(chunk_size=800, chunk_overlap=0)
+).from_loaders(loaders)
+
+lllm = GooglePalm(temperature=0.1)
+chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    chain_type="stuff",
+    retriver=index.vectorstore.as_retriever(),
+    return_source_documents=True
+)
+```
