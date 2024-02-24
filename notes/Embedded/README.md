@@ -1,4 +1,5 @@
 - [GoogleWifi Upgrade: Install OpenWrt, Wireguard, setup Wireless repeater](./OpenWRT-GoogleWifi.md)
+- [Ubuntu Server + QEMU + AppleSilicon](./Install-Ubuntu-Server-VM-AppleSilicon.md)
 - [Replicated Set of Network Attached Sources](./Autorsync.md)
 - [How to unlock Android bootloader on Pixel](AndroidUnlock.md)
 - [Travel Autorsync](Autorsync.md)
