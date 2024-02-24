@@ -2,7 +2,7 @@
 
 <img src="./img/ubuntu_server_installation_on_macbook.webp" alt="ubuntu_server_installation_on_macbook.webp" width="580" height="580">
 
-So, you know how VirtualBox is like, "Sorry, I don't do arm64 macOS." And Docker is all, "Nah, I can't do a lot of stuff that VM could." But fear not! Because there is a way to make your MacBook play nice with Ubuntu without paying money for comercial virtual machines.
+So, you know how VirtualBox is like, "Sorry, I don't do arm64 macOS." This is first frustration after I switched to AppleSilicon macBook.But fear not! Because there is a way to make your MacBook play nice with Ubuntu without paying money for commercial virtual machines.
 
 Step one: Brew yourself some qemu with a dash of `brew install qemu`.
 
