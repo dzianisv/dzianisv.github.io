@@ -57,6 +57,8 @@ qemu-system-aarch64 \
    -drive file=ubuntu.qcow2,format=qcow2,if=virtio,cache=writethrough \
 ```
 
+![](./img/3dd2f56e88f3e0a66dee99c28f71a7be.webp)
+
 Feeling fancy? Add another disk and connect it to your macOS host disk for a wild ride: `-drive file=/dev/disk5,format=qcow2,if=virtio,cache=writethrough`.
 
 Behold! Ubuntu aarch64, running smoothly on your MacBook with an AppleSilicon processor. All it takes is about 30m, give or take, depending on your internet speed. Let the coding adventures begin! 🚀🍻🤓
