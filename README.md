@@ -20,7 +20,7 @@ Spring 2024 Hackahton project. ERC4626-compatible Vault for investing ETH and li
 Winter 2024 Hackhathon Project. EVM automated Liqudity Pools assets manager based on ERC4626 Vault. Smart Contract developed on Solidity, webapp is built using materializecss style controls.
 
 ## [Chrome Extension: Aliexpress Total](https://github.com/dzianisv/chrome-extension-aliexpress-total-cost)
-    This is annoying. You don't see the total cost of the the item on Aliexpress marketplace. This browser extension shows a total price for the item (item price + delivery cost to your region).
+This is annoying. You don't see the total cost of the the item on Aliexpress marketplace. This browser extension shows a total price for the item (item price + delivery cost to your region).
 
 ## [Openhaystack Web](https://github.com/dzianisv/openhaystack-web)
 
