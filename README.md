@@ -19,6 +19,9 @@ Spring 2024 Hackahton project. ERC4626-compatible Vault for investing ETH and li
 ## [DeFiEquilibrium](https://github.com/dzianisv/DeFiEquilibrium)
 Winter 2024 Hackhathon Project. EVM automated Liqudity Pools assets manager based on ERC4626 Vault. Smart Contract developed on Solidity, webapp is built using materializecss style controls.
 
+## [Chrome Extension: Aliexpress Total](https://github.com/dzianisv/chrome-extension-aliexpress-total-cost)
+    This is annoying. You don't see the total cost of the the item on Aliexpress marketplace. This browser extension shows a total price for the item (item price + delivery cost to your region).
+
 ## [Openhaystack Web](https://github.com/dzianisv/openhaystack-web)
 
 I created this project because [Openhaystack](https://github.com/seemoo-lab/openhaystack) app stopped to work on a new MacOS 14, but I needed a way to see locations of my openhaystack tracker. I built BLE beacon trackers using Nordic nrf5281 microcontrollers and ultilized openhaystack-discovered way to get a location of the tracker using [Apple Find My](https://www.apple.com/icloud/find-my/). Check out [openhaystack-toolkit](https://github.com/dzianisv/openhaystack-toolkit) for the tools that helps to flash a firmware to the tracker and generate crypto keypairs.
