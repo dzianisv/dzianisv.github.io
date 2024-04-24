@@ -1,7 +1,7 @@
-# About Me
-Hello, I am a Software Engineer with a passion for Networking, Machine Learning and Decentralized Distributed Systems (including Blockchains and DeFi). You will find my posts and projects here on Github.
+# 👨‍💻 About Me
+👋, I am a Software Engineer with a passion for Networking, Machine Learning and Decentralized Distributed Systems (including Blockchains and DeFi). You will find my posts and projects here on Github.
 
-# Blogposts
+# 📄 Blogposts
 - [Development](notes/Development/README.md)
 - [Blockchain](notes/blockchain/README.md)
 - [Trading Bots](notes/TradingBot/README.md)
@@ -10,7 +10,7 @@ Hello, I am a Software Engineer with a passion for Networking, Machine Learning 
 - [AI](notes/AI/README.md)
 
 
-# My Open Source Software Projects
+# 💻 My Open Source Software Projects
 
 ## [EigenLayer Vault](https://github.com/dzianisv/EigenLayer-FundManager)
 Spring 2024 Hackahton project. ERC4626-compatible Vault for investing ETH and liquid staked ETH (stETH, cbETH, rETH) into EigenLayer by restaking it to the EigenLayer AVS Operators. Vault holdings are managed by the Vault administrators. Rewards are automatically converted to the desired ERC20 token (USDC for example) or restaked (autocompounding). [Medium blogpost](https://medium.com/@dzianisv/blockchain-dev-eigenlayer-erc4626-and-magic-of-auto-compounding-e3016e69dfa4)
@@ -32,11 +32,6 @@ LXDbox is an LXD containers management tool. It provides a more efficient altern
 
 ## [Photos for Documents](https://github.com/dzianisv/Photo4Documents)
 Needed a new passport photo so I created an ML app this weekend that removes backgrounds, aligns faces, and crops to passport size. It utilizes face_recognition dlib-powered library for facial detection and carvekit with tracer_7b pretrained model for background removal. Now I have unlimited great passport photos without going to a photo center! Machine learning is amazing for automating repetitive tasks. Especially I liked face_recognition lib, because it allows align faces from bad photos. I tested it on my photos and on photos from Kaggle dataset. Check out my GitHub for the code and demos!
-
-## [ERC4626 AssetManager](https://github.com/dzianisv/DeFiStrategyManager)
-This is Solidity smart-contract that could be deployed to any EVM-enabled chains (Ethereum, Optimism, Avalanche-C, BNB, Arbitrum, Polygon) for ERC4626 LiquidityPool Vault automated portfolio management.
-`reinvest()` allows to choose best top-perfoming Vaults and reinvest to it.
-
 
 ## [vpngate-client](https://github.com/dzianisv/vpngate-client)
 
