@@ -8,9 +8,10 @@
 - [Networking](notes/Networking/)
 - [Embedded](notes/Embedded/README.md)
 - [AI](notes/AI/README.md)
+- [Medium blogposts](https://medium.com/@dzianisv)
 
 
-# 💻 My Open Source Software Projects
+# 💡 My Open Source Software Projects
 
 ## [EigenLayer Vault](https://github.com/dzianisv/EigenLayer-FundManager)
 Spring 2024 Hackahton project. ERC4626-compatible Vault for investing ETH and liquid staked ETH (stETH, cbETH, rETH) into EigenLayer by restaking it to the EigenLayer AVS Operators. Vault holdings are managed by the Vault administrators. Rewards are automatically converted to the desired ERC20 token (USDC for example) or restaked (autocompounding). [Medium blogpost](https://medium.com/@dzianisv/blockchain-dev-eigenlayer-erc4626-and-magic-of-auto-compounding-e3016e69dfa4)
