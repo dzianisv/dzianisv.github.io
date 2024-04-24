@@ -1,5 +1,5 @@
 # About Me
-Hello, I am a Software Engineer with a passion for Networking and Decentralized Distributed Systems. You will find my posts and projects here on Github.
+Hello, I am a Software Engineer with a passion for Networking, Machine Learning and Decentralized Distributed Systems (including Blockchains and DeFi). You will find my posts and projects here on Github.
 
 # Blogposts
 - [Development](notes/Development/README.md)
@@ -9,10 +9,14 @@ Hello, I am a Software Engineer with a passion for Networking and Decentralized 
 - [Embedded](notes/Embedded/README.md)
 - [AI](notes/AI/README.md)
 
+
 # My Open Source Software Projects
 
+## [EigenLayer Vault](https://github.com/dzianisv/EigenLayer-FundManager)
+Spring 2024 Hackahton project. ERC4626-compatible Vault for investing ETH and liquid staked ETH (stETH, cbETH, rETH) into EigenLayer by restaking it to the EigenLayer AVS Operators. Vault holdings are managed by the Vault administrators. Rewards are automatically converted to the desired ERC20 token (USDC for example) or restaked (autocompounding). [Medium blogpost](https://medium.com/@dzianisv/blockchain-dev-eigenlayer-erc4626-and-magic-of-auto-compounding-e3016e69dfa4)
+
 ## [DeFiEquilibrium](https://github.com/dzianisv/DeFiEquilibrium)
-EVM automated Liqudity Pools assets manager. Smart Contract developed on Solidity, webapp is built using material style controls.
+Winter 2024 Hackhathon Project. EVM automated Liqudity Pools assets manager based on ERC4626 Vault. Smart Contract developed on Solidity, webapp is built using materializecss style controls.
 
 ## [Openhaystack Web](https://github.com/dzianisv/openhaystack-web)
 
