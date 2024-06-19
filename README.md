@@ -8,7 +8,9 @@
 - [Networking](notes/Networking/)
 - [Embedded](notes/Embedded/README.md)
 - [AI](notes/AI/README.md)
-- [Medium blogposts](https://medium.com/@dzianisv)
+  
+- [🔗 Medium blogposts](https://medium.com/@dzianisv)
+- [🔗 Other media blogposts](notes/Blogposts.md]
 
 
 # 💡 My Open Source Software Projects
