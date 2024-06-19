@@ -1,0 +1,1 @@
+- [Using gpt4o for blockchain validator releases tracking](https://www.linkedin.com/pulse/using-gpt4o-blockchain-validator-releases-tracking-dennis--knkze/)
