@@ -1,1 +1,2 @@
-- [Using gpt4o for blockchain validator releases tracking](https://www.linkedin.com/pulse/using-gpt4o-blockchain-validator-releases-tracking-dennis--knkze/)
+- [Using gpt4o for blockchain validator releases tracking Experiment](https://www.linkedin.com/pulse/using-gpt4o-blockchain-validator-releases-tracking-dennis--knkze/)
+- [LLM Crypto ScamAlert Telegram Bot Experiment](https://www.linkedin.com/pulse/crypto-scam-alert-dennis-/)
