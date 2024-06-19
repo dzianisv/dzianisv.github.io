@@ -10,7 +10,7 @@
 - [AI](notes/AI/README.md)
   
 - [🔗 Medium blogposts](https://medium.com/@dzianisv)
-- [🔗 Other media blogposts](notes/Blogposts.md]
+- [🔗 Other media blogposts](notes/Blogposts.md)
 
 
 # 💡 My Open Source Software Projects
