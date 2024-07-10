@@ -1,4 +1,4 @@
-# Boosting My Rural Internet Speed with OpenWRT and a 3G Modem
+# Boosting My Rural Internet Speed with OpenWRT UniElec U7628-01 and a PCI-E Modem BM806U
 
 Living in the countryside has its perks, but high-speed internet isn't one of them. I was stuck with a snail-paced 5Mbps ADSL connection, while my city friends boasted about their 100Mbps fiber optic plans. Tired of the buffering and laggy video calls, I decided to take matters into my own hands.
 
@@ -13,6 +13,28 @@ After scouring the internet, I stumbled upon a solution: a WiFi router with a PC
 This quirky router, reminiscent of building blocks, boasts a 580MHz MediaTek MT7628AN processor, 64MB DDR2 RAM, and 16MB flash storage. With 4 LAN ports, dual-band WiFi, and a USB 2.0 port, it's a steal. The cherry on top? The PCI-E slot for the 3G/4G modem.
 
 ### The Modem: [LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057) - $18
+
+Technical setup
+```
+BM806U-C1+:
+FDD-LTE:B1/B3/B5/B8 TDD-LTE:B34/B38/B39/B40/B41(120M)
+HSPA/UMTS:B1/B5/B8 EVDO/CDMA:BCO
+GSM/GPRS/EDGE:B3/B8
+BMB06U-E1+:
+FDD-LTE B1/B2/B3/B5/B7/B8/B20 TDD-LTE B38/B40/B41(120M)
+HSPA/UMTS:B1/B2/B5/B8
+GSM/GPRS/EDGE:B2/B3/B5/88
+BM806U-A1+
+FDD-LTE:B2/B3/B4/B5/B12/B13/B17/825/826/866
+TDD-LTE:B41(200M)
+HSPA/UMTS:B2/B4/B5
+GSM/GPRS/EDGE:B2/85
+BM806U-T1+:
+FDD-LTE:B1/B2/B3/B4/B5/B7/B8/B20/828/B66
+TDD-LTE:B34/B38/B39/B40/B41(200M)
+HSPA/UMTS:B1/B2/B4/B5/B8 EVDO/CDMA:BCO
+GSM/GPRS/EDGE:B2/B3/B5/B8
+```
 
 ![](../img/d2522b1a-0b8c-47e7-a290-27291786572c.webp)
 
