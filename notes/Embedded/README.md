@@ -8,7 +8,7 @@
 - [Bare metal ESP32 flashing](ESP32-Flashing.md)
 - [ESP32 peripherals](ESP32-peripherals.md)
 - [Noridic nRF51822 Airtag](Nordic-NRF51822-Airtag.md)
-- [Boosting My Rural Internet Speed with OpenWRT and a 3G Modem](OpenWRT-UniElec-LTE-Router.md)
+- [Boosting My Rural Internet Speed with OpenWRT UniElec U7628-01 and a PCI-E Modem BM806U](OpenWRT-UniElec-LTE-Router.md)
 - [Setting Up OpenWRT Configuration Backup to GitLab](OpenWrt-GitServiceDiscovery.md)
 - [multi-SSID multi-VPN OpenWrt router setup](OpenWrt-WireguardPirvateLan.md)
 - [OpenWrtDualWiFi](OpenWrtDualWiFi.md)
