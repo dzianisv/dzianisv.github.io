@@ -1,4 +1,4 @@
-# Boosting My Rural Internet Speed with OpenWRT UniElec U7628-01 and a PCI-E Modem BM806U
+# Boosting My Rural Internet Speed with OpenWRT UniElec U7628-01 and a mPCI-E BroadMobi BM806U
 
 Living in the countryside has its perks, but high-speed internet isn't one of them. I was stuck with a snail-paced 5Mbps ADSL connection, while my city friends boasted about their 100Mbps fiber optic plans. Tired of the buffering and laggy video calls, I decided to take matters into my own hands.
 
@@ -12,7 +12,9 @@ After scouring the internet, I stumbled upon a solution: a WiFi router with a PC
 
 This quirky router, reminiscent of building blocks, boasts a 580MHz MediaTek MT7628AN processor, 64MB DDR2 RAM, and 16MB flash storage. With 4 LAN ports, dual-band WiFi, and a USB 2.0 port, it's a steal. The cherry on top? The PCI-E slot for the 3G/4G modem.
 
-### The Modem: [LTE 3G module BM806U](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057) - $18
+### The Modem: [mPCI-E BroadMobi BM806U module](https://aliexpress.ru/item/1005003907236172.html?spm=a2g2w.orderdetail.0.0.7ce34aa6s8FTbg&sku_id=12000027436374057) - $18
+
+[AT Commands](https://github.com/CMCCAdmin/lte-openwrt/blob/master/BM806U_AT.pdf)
 
 Technical setup
 ```
@@ -35,6 +37,19 @@ TDD-LTE:B34/B38/B39/B40/B41(200M)
 HSPA/UMTS:B1/B2/B4/B5/B8 EVDO/CDMA:BCO
 GSM/GPRS/EDGE:B2/B3/B5/B8
 ```
+
+I made a mistake, because this Aliexpress seller was not honest, and provided the description for the LTE modules he didn't sell. 
+
+I learned this by running 
+
+`minicom -D /dev/ttyUSB1`
+```
+AT+BMBANDPREF=? 
+
++BMBANDPREF: support band: 0x2000000400380, 0x1E000000085, 0x21
+```
+
+`0x1E000000085` means `['EUTRAN_BAND1', 'EUTRAN_BAND3', 'EUTRAN_BAND8', 'EUTRAN_BAND38', 'EUTRAN_BAND39', 'EUTRAN_BAND40', 'EUTRAN_BAND41']`, but I need BAND20. So, only 3G is available, no 4G.
 
 ![](../img/d2522b1a-0b8c-47e7-a290-27291786572c.webp)
 
