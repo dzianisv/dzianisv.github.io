@@ -5,12 +5,18 @@
 So, you know how VirtualBox is like, "Sorry, I don't do arm64 macOS." This is first frustration after I switched to AppleSilicon macBook.But fear not! Because there is a way to make your MacBook play nice with Ubuntu without paying money for commercial virtual machines.
 
 Step one: Brew yourself some qemu with a dash of `brew install qemu`.
-Step two: download the QEMU_EFI.fd firmware from  `wget https://releases.linaro.org/components/kernel/uefi-linaro/16.02/release/qemu64/QEMU_EFI.fd`.
-Step three: download an installation iso: `wget https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.4-live-server-arm64.iso`
+Step two: download the QEMU_EFI.fd firmware from  
+```shell
+wget https://releases.linaro.org/components/kernel/uefi-linaro/16.02/release/qemu64/QEMU_EFI.fd
+```
+Step three: download an installation iso: 
+```shell
+wget https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.4-live-server-arm64.iso
+```
 Next, whip up a disk image with `qemu-img create -f qcow2 ubuntu-latest.img 40G`.
 Now, let's fire up that virtual machine with Ubuntu and all its aarch64 goodness:
 
-```bash
+```shell
 qemu-system-aarch64 \
    -monitor stdio \
    -M virt,highmem=off \
