@@ -1,3 +1,4 @@
+- [Interactive LLM Comparison for Coding Tasks](Cursor-LLM-comparison.html)
 - [LangChain](LangChain.md)
 - [Text To Speech](OpenSourceProjects.md)
 - [LLM Prompt Engineering](PromptEngineering.md)

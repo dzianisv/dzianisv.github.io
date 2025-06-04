@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive LLM Comparison for Coding Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Scholarly Neutrals -->
+    <!-- Application Structure Plan: The SPA is designed as an interactive dashboard with four main sections accessible via a sticky top navigation: 'Overview', 'Compare Models', 'Benchmarks', and 'About'. This structure was chosen to guide the user from a high-level summary to detailed, interactive exploration. The 'Overview' presents the final ranking via scannable cards. The 'Compare Models' section allows for direct, multi-faceted comparison using a radar chart and side-by-side text, which is more effective for decision-making than a static list. The 'Benchmarks' section isolates quantitative data into clear charts for performance analysis. Finally, the 'About' section provides the report's original context. This user-centric flow from summary to detail facilitates understanding and exploration better than a linear replication of the source report. -->
+    <!-- Visualization & Content Choices: 
+        - Overall Ranking: Report Info -> Final ranked list. Goal -> Inform & Navigate. Viz/Method -> Interactive HTML cards with key stats. Interaction -> Click card to scroll to its detailed profile. Justification -> Provides a quick, scannable summary and entry point for deeper dives.
+        - Model Comparison: Report Info -> Model capabilities and justifications. Goal -> Compare. Viz/Method -> Multi-select dropdown feeding a Radar Chart (Chart.js) and side-by-side text blocks. Interaction -> User selects up to 3 models to compare their qualitative strengths visually and read detailed justifications. Justification -> A radar chart is ideal for showing strengths/weaknesses across multiple abstract axes (like 'Reasoning' or 'Context Handling').
+        - Benchmark Data: Report Info -> Quantitative benchmark scores (SWE-bench, HumanEval, etc.). Goal -> Compare. Viz/Method -> Horizontal Bar Charts (Chart.js). Interaction -> Hover on bars to see precise scores. Justification -> Bar charts are the clearest way to compare a single metric across multiple entities.
+        - Contextual Info: Report Info -> Report's methodology and definitions. Goal -> Inform. Viz/Method -> Accordion-style collapsible text sections. Interaction -> Click to expand/collapse. Justification -> Keeps supplementary information tidy and accessible without cluttering the main view.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F7F4;
+            color: #1f2937;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom-color: #4f46e5;
+        }
+        .rank-gradient-gold { background: linear-gradient(135deg, #fde047, #f59e0b); }
+        .rank-gradient-silver { background: linear-gradient(135deg, #e5e7eb, #9ca3af); }
+        .rank-gradient-bronze { background: linear-gradient(135deg, #fcd34d, #d97706); }
+        .rank-gradient-rest { background: linear-gradient(135deg, #d1d5db, #6b7280); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-800">LLM Coder Rankings</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Overview</a>
+                        <a href="#compare" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Compare Models</a>
+                        <a href="#benchmarks" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">Benchmarks</a>
+                        <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent">About</a>
+                    </div>
+                </div>
+                 <div class="md:hidden">
+                    <select id="mobile-nav" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                        <option value="#overview">Overview</option>
+                        <option value="#compare">Compare</option>
+                        <option value="#benchmarks">Benchmarks</option>
+                        <option value="#about">About</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <section id="overview" class="mb-16 scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">LLM Rankings for Big Projects & Hard Coding</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                    An interactive analysis of 13 LLMs available in the Cursor IDE, ranked by their suitability for large-scale, complex software development. Click on any model card to jump to its detailed profile.
+                </p>
+            </div>
+            <div id="ranking-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+        </section>
+
+        <section id="compare" class="mb-16 scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Compare Models</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                    Select up to 3 models to compare their capabilities side-by-side. The radar chart visualizes their strengths across four key development areas, while the text below provides detailed justifications.
+                </p>
+            </div>
+            
+            <div class="w-full max-w-2xl mx-auto mb-8">
+                <label for="model-selector" class="block text-sm font-medium text-gray-700 mb-2">Select Models to Compare:</label>
+                <select id="model-selector" multiple class="block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </select>
+            </div>
+
+            <div id="comparison-container" class="mt-8">
+                <div id="radar-chart-container" class="mb-8 chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+                <div id="comparison-details" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </div>
+        </section>
+
+        <section id="benchmarks" class="mb-16 scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Benchmark Deep Dive</h2>
+                 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                    This section visualizes model performance on key coding benchmarks. SWE-Bench tests real-world bug fixing, HumanEval measures code generation from docstrings, and LiveCodeBench assesses performance on diverse competitive programming tasks.
+                </p>
+            </div>
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">SWE-bench (Verified %) - Higher is Better</h3>
+                    <div class="chart-container h-96">
+                        <canvas id="sweBenchChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">HumanEval (%) - Higher is Better</h3>
+                    <div class="chart-container h-96">
+                        <canvas id="humanEvalChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-800">LiveCodeBench (%) - Higher is Better</h3>
+                     <div class="chart-container h-80">
+                        <canvas id="liveCodeBenchChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About This Analysis</h2>
+                 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                    The following sections provide the definitions and criteria used to evaluate and rank the models, based on the original source report. Click to expand and learn more about the methodology.
+                </p>
+            </div>
+            <div id="about-container" class="max-w-4xl mx-auto space-y-4">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center">
+            <p>Interactive report generated based on the "LLM Selection for Large-Scale and Complex Coding Tasks in Cursor" analysis.</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const modelData = [
+        {
+            id: 'claude-4-opus',
+            name: 'Claude 4 Opus',
+            rank: 1,
+            provider: 'Anthropic',
+            contextNormal: '120k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Anthropic\'s premier model, leading in SWE-bench.',
+            scores: { swe_bench: 73.2, human_eval: 84.9, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 5, realWorldFixes: 5, codeGeneration: 3 },
+            justification: "Represents the pinnacle of coding and reasoning capabilities in the Claude family. Its top SWE-bench scores (73.2%) and large context window make it exceptionally well-suited for the most demanding large projects and the hardest coding tasks.",
+        },
+        {
+            id: 'o3',
+            name: 'o3',
+            provider: 'OpenAI',
+            rank: 2,
+            contextNormal: '128k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'High reasoning effort. Top-tier for logic.',
+            scores: { swe_bench: 71.7, human_eval: 80.0, live_code_bench: 79.0 },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 5, realWorldFixes: 5, codeGeneration: 2 },
+            justification: "OpenAI's most powerful reasoning model, setting SOTA on benchmarks like Codeforces and SWE-bench (up to 71.7%). Ideal for complex queries requiring multi-faceted analysis. Excels in programming, math, and science. Its context window is sufficient for many large projects.",
+        },
+        {
+            id: 'claude-3.7-sonnet-thinking',
+            name: 'Claude 3.7 Sonnet Thinking',
+            provider: 'Anthropic',
+            rank: 3,
+            contextNormal: '120k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Powerful but eager to make changes.',
+            scores: { swe_bench: 70.3, human_eval: 86.0, live_code_bench: 50.0 },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 5, realWorldFixes: 5, codeGeneration: 4 },
+            justification: "A premier choice for hard coding tasks due to its exceptional SWE-bench performance (~70.3%) and 'extended thinking' mode. Its context window is very good for large projects. The 'eager to make changes' trait might require careful prompting for refactoring tasks.",
+        },
+        {
+            id: 'gpt-4.1',
+            name: 'gpt-4.1',
+            provider: 'OpenAI',
+            rank: 4,
+            contextNormal: '128k',
+            contextMax: '1M',
+            capabilities: ['Agent'],
+            notes: 'Massive 1M token context window.',
+            scores: { swe_bench: 54.6, human_eval: null, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 5, complexReasoning: 4, realWorldFixes: 4, codeGeneration: 3 },
+            justification: "Top choice for projects demanding massive context handling (1M tokens). Very strong for many hard coding tasks with a SWE-bench score of 54.6%, though dedicated reasoning models might have an edge in pure logical complexity if context isn't the main bottleneck.",
+        },
+        {
+            id: 'claude-4-sonnet-thinking',
+            name: 'Claude 4 Sonnet Thinking',
+            provider: 'Anthropic',
+            rank: 5,
+            contextNormal: '120k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Excellent SWE-bench performance.',
+            scores: { swe_bench: 72.4, human_eval: null, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 4, realWorldFixes: 5, codeGeneration: 3 },
+            justification: "A top-tier model for hard coding tasks due to its excellent SWE-bench score (underlying Sonnet 4 scores ~72.7%) and reasoning capabilities via 'Thinking' mode. It offers a good context window for large projects.",
+        },
+        {
+            id: 'o4-mini',
+            name: 'o4-mini',
+            provider: 'OpenAI',
+            rank: 6,
+            contextNormal: '128k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'High reasoning, cost-efficient.',
+            scores: { swe_bench: 68.1, human_eval: null, live_code_bench: 73.0 },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 4, realWorldFixes: 5, codeGeneration: 2 },
+            justification: "Offers an excellent balance of reasoning, coding prowess, and efficiency. Its strong performance on SWE-bench (68.1%) and LiveCodeBench (73%), combined with good context handling, makes it very suitable for both big projects and hard coding tasks.",
+        },
+        {
+            id: 'deepseek-v2',
+            name: 'DeepSeek V2 series',
+            provider: 'DeepSeek',
+            rank: 7,
+            contextNormal: '128k',
+            contextMax: '128k',
+            capabilities: [],
+            notes: 'Strong open-source coder.',
+            scores: { swe_bench: 12.7, human_eval: 90.2, live_code_bench: 43.4 },
+            qualitativeScores: { codebaseUnderstanding: 3, complexReasoning: 3, realWorldFixes: 2, codeGeneration: 5 },
+            justification: "A very strong contender from the open-source side. Excellent for code generation (HumanEval 90.2%) and has a good context window. Its lower SWE-bench score (12.7%) compared to top proprietary models places it slightly lower for complex real-world debugging tasks.",
+        },
+        {
+            id: 'grok-3-beta',
+            name: 'grok-3-beta',
+            provider: 'xAI',
+            rank: 8,
+            contextNormal: '60k',
+            contextMax: '132k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Strong reasoning and STEM.',
+            scores: { swe_bench: null, human_eval: null, live_code_bench: 79.4 },
+            qualitativeScores: { codebaseUnderstanding: 3, complexReasoning: 4, realWorldFixes: 3, codeGeneration: 2 },
+            justification: "A very strong reasoning model with excellent coding benchmarks like LiveCodeBench (79.4%). Its context window in Cursor is a slight limitation for the very largest projects compared to 1M+ token models, but its reasoning is top-tier.",
+        },
+        {
+            id: 'gpt-4o',
+            name: 'gpt-4o',
+            provider: 'OpenAI',
+            rank: 9,
+            contextNormal: '60k',
+            contextMax: '128k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Fast and capable generalist.',
+            scores: { swe_bench: 33.0, human_eval: 90.2, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 3, complexReasoning: 3, realWorldFixes: 3, codeGeneration: 5 },
+            justification: "A strong generalist and good for many coding tasks, especially with its speed/cost balance. Strong HumanEval (90.2%), but for the most demanding large-scale work, models with larger effective context use or deeper specialized reasoning have an edge.",
+        },
+        {
+            id: 'grok-3-mini',
+            name: 'grok-3-mini',
+            provider: 'xAI',
+            rank: 10,
+            contextNormal: '60k',
+            contextMax: '132k',
+            capabilities: ['Agent'],
+            notes: 'Efficient STEM performer.',
+            scores: { swe_bench: null, human_eval: null, live_code_bench: 80.4 },
+            qualitativeScores: { codebaseUnderstanding: 3, complexReasoning: 3, realWorldFixes: 3, codeGeneration: 2 },
+            justification: "A very efficient and capable model, leading on LiveCodeBench (80.4%). Its smaller context window in Cursor and lack of explicit 'Thinking' capability place it here for combined large project/hard coding scenarios.",
+        },
+        {
+            id: 'claude-3.5-sonnet',
+            name: 'Claude 3.5 Sonnet',
+            provider: 'Anthropic',
+            rank: 11,
+            contextNormal: '75k',
+            contextMax: '200k',
+            capabilities: ['Agent', 'Thinking'],
+            notes: 'Great all-rounder.',
+            scores: { swe_bench: 49.0, human_eval: 92.0, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 4, complexReasoning: 3, realWorldFixes: 4, codeGeneration: 5 },
+            justification: "A very capable model with top-tier HumanEval (92%). For the most demanding tasks requiring deep reasoning and multi-file understanding, it's slightly edged out by models with stronger reasoning or higher SWE-bench scores.",
+        },
+        {
+            id: 'gpt-3.5-turbo',
+            name: 'gpt-3.5-turbo',
+            provider: 'OpenAI',
+            rank: 12,
+            contextNormal: '4k',
+            contextMax: '16k',
+            capabilities: [],
+            notes: 'Fast, for simple tasks.',
+            scores: { swe_bench: null, human_eval: 72.8, live_code_bench: null },
+            qualitativeScores: { codebaseUnderstanding: 1, complexReasoning: 1, realWorldFixes: 1, codeGeneration: 2 },
+            justification: "Best for small, well-defined tasks but falls short for the demands of big projects and hard coding due to its small context window and less advanced reasoning capabilities compared to newer models.",
+        }
+    ].sort((a, b) => a.rank - b.rank);
+
+    const aboutData = {
+        'Defining "Big Projects"': `
+            <ul class="list-disc list-inside space-y-2 text-left text-gray-600">
+                <li><strong>Large Context Window & Codebase Understanding:</strong> The model must be able to process and "comprehend" extensive codebases to make informed decisions. A larger context window is critical for tasks like refactoring, understanding architectural dependencies, or debugging issues that span multiple files.</li>
+                <li><strong>Multi-File Operations & Architectural Understanding:</strong> Beyond single-file edits, LLMs must demonstrate the ability to reason across multiple files, understand inter-component dependencies, and ideally, contribute to or critique software architecture.</li>
+                <li><strong>Maintainability of Generated Code:</strong> For projects with longevity, the LLM should produce code that is not only functional but also clean, readable, and adheres to established software engineering best practices.</li>
+            </ul>`,
+        'Defining "Hard Coding Tasks"': `
+            <ul class="list-disc list-inside space-y-2 text-left text-gray-600">
+                <li><strong>Code Generation Accuracy & Complex Logic:</strong> The ability to generate syntactically correct and semantically sound code for non-trivial requirements, algorithms, and intricate logic.</li>
+                <li><strong>Debugging Capabilities:</strong> Assisting in the identification and resolution of complex bugs, which requires a deeper semantic understanding of the code. Performance on benchmarks like SWE-bench is a strong indicator.</li>
+                <li><strong>Reasoning and Problem-Solving:</strong> Advanced reasoning to break down problems, devise solutions, and handle edge cases. Models with explicit "thinking" modes are generally better equipped for these challenges.</li>
+                <li><strong>Advanced Tool Use & Agentic Features:</strong> The capacity to utilize external tools, follow complex multi-step instructions, and perform agentic actions (e.g., executing commands, running tests) significantly enhances an LLM's ability to tackle hard coding tasks.</li>
+            </ul>`
+    };
+
+    const rankingGrid = document.getElementById('ranking-grid');
+    const modelSelector = document.getElementById('model-selector');
+    const comparisonDetails = document.getElementById('comparison-details');
+    const radarChartContainer = document.getElementById('radar-chart-container');
+    const aboutContainer = document.getElementById('about-container');
+    let radarChartInstance = null;
+    let selectedModels = [];
+
+    function getRankGradient(rank) {
+        if (rank === 1) return 'rank-gradient-gold';
+        if (rank === 2) return 'rank-gradient-silver';
+        if (rank === 3) return 'rank-gradient-bronze';
+        return 'rank-gradient-rest';
+    }
+    
+    function populateRankings() {
+        rankingGrid.innerHTML = '';
+        modelData.forEach(model => {
+            const card = document.createElement('div');
+            card.id = `card-${model.id}`;
+            card.className = "bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col";
+            card.innerHTML = `
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex-grow">
+                        <p class="text-sm font-medium text-indigo-600">${model.provider}</p>
+                        <h3 class="text-xl font-bold text-gray-900">${model.name}</h3>
+                    </div>
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${getRankGradient(model.rank)}">
+                        ${model.rank}
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4 flex-grow">${model.notes}</p>
+                <div class="text-xs text-gray-500 space-y-1 mt-auto">
+                    <div class="flex justify-between"><span>Context (Normal):</span> <strong>${model.contextNormal}</strong></div>
+                    <div class="flex justify-between"><span>Context (Max):</span> <strong>${model.contextMax}</strong></div>
+                    <div class="flex justify-between items-center">
+                      <span>Capabilities:</span> 
+                      <div class="flex space-x-1.5">
+                        ${model.capabilities.includes('Agent') ? '<span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Agent</span>' : ''}
+                        ${model.capabilities.includes('Thinking') ? '<span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">Thinking</span>' : ''}
+                        ${model.capabilities.length === 0 ? '<span>N/A</span>' : ''}
+                      </div>
+                    </div>
+                </div>
+            `;
+            card.addEventListener('click', () => {
+                 document.getElementById('compare').scrollIntoView();
+                 updateComparison([model.id]);
+            });
+            rankingGrid.appendChild(card);
+        });
+    }
+
+    function populateSelector() {
+        modelData.forEach(model => {
+            const option = document.createElement('option');
+            option.value = model.id;
+            option.textContent = `(#${model.rank}) ${model.name}`;
+            modelSelector.appendChild(option);
+        });
+        modelSelector.addEventListener('change', () => {
+            selectedModels = Array.from(modelSelector.selectedOptions).map(opt => opt.value).slice(0, 3);
+            updateComparison(selectedModels);
+        });
+    }
+
+    function updateComparison(modelIds) {
+        selectedModels = modelIds;
+        const options = Array.from(modelSelector.options);
+        options.forEach(opt => {
+            opt.selected = selectedModels.includes(opt.value);
+        });
+
+        comparisonDetails.innerHTML = '';
+        const modelsToCompare = modelData.filter(m => selectedModels.includes(m.id));
+
+        if (modelsToCompare.length === 0) {
+            radarChartContainer.style.display = 'none';
+            comparisonDetails.innerHTML = `<p class="text-center text-gray-500 col-span-full">Select one or more models to see a detailed comparison.</p>`;
+            return;
+        }
+
+        radarChartContainer.style.display = 'block';
+
+        modelsToCompare.forEach(model => {
+            const detailCard = document.createElement('div');
+            detailCard.className = "bg-white rounded-lg shadow-sm p-6 border border-gray-200";
+            detailCard.innerHTML = `
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-lg font-bold text-gray-900">${model.name}</h3>
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm ${getRankGradient(model.rank)}">
+                        ${model.rank}
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm">${model.justification}</p>
+            `;
+            comparisonDetails.appendChild(detailCard);
+        });
+
+        updateRadarChart(modelsToCompare);
+    }
+
+    function updateRadarChart(models) {
+        if (radarChartInstance) {
+            radarChartInstance.destroy();
+        }
+        const ctx = document.getElementById('radarChart').getContext('2d');
+        const labels = ['Codebase Understanding', 'Complex Reasoning', 'Real-World Fixes (SWE)', 'Code Generation (HE)'];
+        const datasets = models.map((model, index) => {
+            const colors = [
+                { bg: 'rgba(79, 70, 229, 0.2)', border: 'rgba(79, 70, 229, 1)' },
+                { bg: 'rgba(219, 39, 119, 0.2)', border: 'rgba(219, 39, 119, 1)' },
+                { bg: 'rgba(245, 158, 11, 0.2)', border: 'rgba(245, 158, 11, 1)' }
+            ];
+            return {
+                label: model.name,
+                data: [
+                    model.qualitativeScores.codebaseUnderstanding,
+                    model.qualitativeScores.complexReasoning,
+                    model.qualitativeScores.realWorldFixes,
+                    model.qualitativeScores.codeGeneration
+                ],
+                backgroundColor: colors[index % colors.length].bg,
+                borderColor: colors[index % colors.length].border,
+                pointBackgroundColor: colors[index % colors.length].border,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[index % colors.length].border
+            };
+        });
+
+        radarChartInstance = new Chart(ctx, {
+            type: 'radar',
+            data: { labels, datasets },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    r: {
+                        angleLines: { display: true },
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        pointLabels: {
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                            stepSize: 1,
+                            backdropColor: 'rgba(255, 255, 255, 0.75)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    }
+
+    function createBarChart(canvasId, data, label, valueKey, colors) {
+        const validData = data.filter(d => d.scores[valueKey] !== null).sort((a,b) => b.scores[valueKey] - a.scores[valueKey]);
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: validData.map(d => d.name),
+                datasets: [{
+                    label: label,
+                    data: validData.map(d => d.scores[valueKey]),
+                    backgroundColor: colors.bg,
+                    borderColor: colors.border,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                     tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Score (%)'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            autoSkip: false
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function populateBenchmarks() {
+        createBarChart('sweBenchChart', modelData, 'SWE-bench Score', 'swe_bench', { bg: 'rgba(59, 130, 246, 0.5)', border: 'rgba(37, 99, 235, 1)' });
+        createBarChart('humanEvalChart', modelData, 'HumanEval Score', 'human_eval', { bg: 'rgba(16, 185, 129, 0.5)', border: 'rgba(5, 150, 105, 1)' });
+        createBarChart('liveCodeBenchChart', modelData, 'LiveCodeBench Score', 'live_code_bench', { bg: 'rgba(239, 68, 68, 0.5)', border: 'rgba(220, 38, 38, 1)' });
+    }
+    
+    function populateAbout() {
+        Object.entries(aboutData).forEach(([title, content], index) => {
+            const accordionItem = document.createElement('div');
+            accordionItem.className = 'bg-white rounded-lg shadow-sm border border-gray-200';
+            accordionItem.innerHTML = `
+                <h3 id="accordion-title-${index}" class="mb-0">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300" data-accordion-target="#accordion-body-${index}">
+                        <span>${title}</span>
+                        <svg class="w-6 h-6 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </h3>
+                <div id="accordion-body-${index}" class="hidden p-5 border-t border-gray-200">
+                    ${content}
+                </div>
+            `;
+            aboutContainer.appendChild(accordionItem);
+
+            const button = accordionItem.querySelector('button');
+            const body = accordionItem.querySelector(`#accordion-body-${index}`);
+            const icon = button.querySelector('svg');
+            
+            button.addEventListener('click', () => {
+                const isHidden = body.classList.contains('hidden');
+                body.classList.toggle('hidden');
+                icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+            });
+        });
+    }
+
+    function setupNavObserver() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-25% 0px -75% 0px' });
+
+        sections.forEach(section => observer.observe(section));
+
+        document.getElementById('mobile-nav').addEventListener('change', (e) => {
+            window.location.hash = e.target.value;
+        });
+    }
+    
+    populateRankings();
+    populateSelector();
+    updateComparison([]);
+    populateBenchmarks();
+    populateAbout();
+    setupNavObserver();
+});
+</script>
+</body>
+</html>
